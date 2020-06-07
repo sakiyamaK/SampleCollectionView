@@ -35,17 +35,31 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-Cd-W0d">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="193.5"/>
                                         <state key="normal" title="Sample1"/>
                                         <connections>
                                             <segue destination="Hdd-FS-dG4" kind="show" id="QWm-6N-2HG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ2-tZ-qS2">
-                                        <rect key="frame" x="0.0" y="387" width="414" height="387"/>
+                                        <rect key="frame" x="0.0" y="193.5" width="414" height="193.5"/>
                                         <state key="normal" title="Sample2"/>
                                         <connections>
                                             <segue destination="Ke6-0D-88h" kind="show" id="1hb-Oi-WG8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPZ-34-Fkn">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="193.5"/>
+                                        <state key="normal" title="Sample3"/>
+                                        <connections>
+                                            <segue destination="DAE-9s-3iK" kind="show" id="0jL-Qj-f7S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-lw-aM4">
+                                        <rect key="frame" x="0.0" y="580.5" width="414" height="193.5"/>
+                                        <state key="normal" title="Sample4"/>
+                                        <connections>
+                                            <segue destination="X1X-Zw-Onv" kind="show" id="no0-xB-Ufr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -84,7 +98,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RW5-cm-blP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="332"/>
+            <point key="canvasLocation" x="371" y="199"/>
+        </scene>
+        <!--Sample3Collection-->
+        <scene sceneID="0Xx-Qx-QyV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sample3Collection" id="DAE-9s-3iK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="u6c-FY-kGM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhU-2c-q0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="316"/>
+        </scene>
+        <!--Sample4Collection-->
+        <scene sceneID="asf-mr-n0U">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sample4Collection" id="X1X-Zw-Onv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ov8-Pa-8qU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGy-fZ-8NJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="416"/>
         </scene>
     </scenes>
 </document>

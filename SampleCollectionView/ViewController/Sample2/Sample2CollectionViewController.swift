@@ -13,7 +13,7 @@ import UIKit
 final class Sample2CollectionViewController: UIViewController {
 
   typealias Cell = UICollectionViewCell
-  private let CellID = NSStringFromClass(UICollectionViewCell.self)
+  private let CellID = String(describing: Cell.self)
 
   typealias HeaderView = UICollectionReusableView
   private let HeaderID = "header"

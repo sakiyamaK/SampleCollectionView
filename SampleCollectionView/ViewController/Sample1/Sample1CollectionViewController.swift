@@ -13,7 +13,7 @@ import UIKit
 final class Sample1CollectionViewController: UIViewController {
 
   typealias Cell = UICollectionViewCell
-  private let CellID = NSStringFromClass(Cell.self)
+  private let CellID = String(describing: Cell.self)
 
   @IBOutlet private weak var collectionView: UICollectionView! {
     didSet {
