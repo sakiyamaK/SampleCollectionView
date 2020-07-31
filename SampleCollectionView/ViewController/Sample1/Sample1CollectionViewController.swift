@@ -12,12 +12,9 @@ import UIKit
 
 final class Sample1CollectionViewController: UIViewController {
 
-  typealias Cell = UICollectionViewCell
-  private let CellID = String(describing: Cell.self)
-
   @IBOutlet private weak var collectionView: UICollectionView! {
     didSet {
-      collectionView.register(Cell.self, forCellWithReuseIdentifier: CellID)
+      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.reuseIdentifier)
     }
   }
 }
@@ -31,7 +28,7 @@ extension Sample1CollectionViewController: UICollectionViewDataSource {
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     //セルの再利用
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID, for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.reuseIdentifier, for: indexPath)
     //indexPathで背景色を変えてみた
     switch indexPath.item % 5 {
     case 0:

@@ -12,9 +12,6 @@ import UIKit
 
 final class Sample2CollectionViewController: UIViewController {
 
-  typealias Cell = UICollectionViewCell
-  private let CellID = String(describing: Cell.self)
-
   typealias HeaderView = UICollectionReusableView
   private let HeaderID = "header"
   typealias FooterView = UICollectionReusableView
@@ -23,7 +20,7 @@ final class Sample2CollectionViewController: UIViewController {
   @IBOutlet private weak var collectionView: UICollectionView! {
     didSet {
 
-      collectionView.register(Cell.self, forCellWithReuseIdentifier: CellID)
+      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.reuseIdentifier)
 
       //ヘッダとフッダの登録
       collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderID)
@@ -62,7 +59,7 @@ extension Sample2CollectionViewController: UICollectionViewDataSource {
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     //セルの再利用
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID, for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.reuseIdentifier, for: indexPath)
     //indexPathで背景色を変えてみた
     switch indexPath.item % 5 {
     case 0:

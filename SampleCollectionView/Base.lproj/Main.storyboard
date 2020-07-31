@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UAw-pM-BM8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UAw-pM-BM8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -35,31 +35,45 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-Cd-W0d">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
                                         <state key="normal" title="Sample1"/>
                                         <connections>
                                             <segue destination="Hdd-FS-dG4" kind="show" id="QWm-6N-2HG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ2-tZ-qS2">
-                                        <rect key="frame" x="0.0" y="193.5" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="129" width="414" height="129"/>
                                         <state key="normal" title="Sample2"/>
                                         <connections>
                                             <segue destination="Ke6-0D-88h" kind="show" id="1hb-Oi-WG8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPZ-34-Fkn">
-                                        <rect key="frame" x="0.0" y="387" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="258" width="414" height="129"/>
                                         <state key="normal" title="Sample3"/>
                                         <connections>
                                             <segue destination="DAE-9s-3iK" kind="show" id="0jL-Qj-f7S"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-lw-aM4">
-                                        <rect key="frame" x="0.0" y="580.5" width="414" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="387" width="414" height="129"/>
                                         <state key="normal" title="Sample4"/>
                                         <connections>
                                             <segue destination="X1X-Zw-Onv" kind="show" id="no0-xB-Ufr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHW-ET-CYR">
+                                        <rect key="frame" x="0.0" y="516" width="414" height="129"/>
+                                        <state key="normal" title="Sample5"/>
+                                        <connections>
+                                            <segue destination="KzB-qT-rZs" kind="show" id="0S5-hq-Uno"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFa-t5-xgC">
+                                        <rect key="frame" x="0.0" y="645" width="414" height="129"/>
+                                        <state key="normal" title="Sample6"/>
+                                        <connections>
+                                            <segue destination="yfG-Kv-bPD" kind="show" id="Gm8-rm-cPp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -119,6 +133,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGy-fZ-8NJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="333" y="416"/>
+        </scene>
+        <!--Sample5Collection-->
+        <scene sceneID="WWU-Hw-VVR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sample5Collection" id="KzB-qT-rZs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bE8-TR-5rC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rn3-LF-7XB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="489"/>
+        </scene>
+        <!--Sample6Collection-->
+        <scene sceneID="Akw-9P-KNs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sample6Collection" id="yfG-Kv-bPD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AOu-xX-lnc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xT5-mt-kQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="614"/>
         </scene>
     </scenes>
 </document>

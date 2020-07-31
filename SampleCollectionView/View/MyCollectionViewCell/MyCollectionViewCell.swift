@@ -10,7 +10,10 @@ import UIKit
 import Kingfisher
 
 final class MyCollectionViewCell: UICollectionViewCell {
-  
+
+  static var nib: UINib { UINib.init(nibName: String(describing: MyCollectionViewCell.self), bundle: nil) }
+//  static var reuseIdentifier: String { String(describing: MyCollectionViewCell.self) }
+
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var icon: UIImageView!
 
@@ -46,5 +49,9 @@ final class MyCollectionViewCell: UICollectionViewCell {
 
     //値が決まってからlayoutをちゃんと更新する
     layoutIfNeeded()
+  }
+
+  func loadNib() {
+    
   }
 }

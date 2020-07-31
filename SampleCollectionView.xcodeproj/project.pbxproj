@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		0643F477BB9B43E07551D160 /* Pods_SampleCollectionView_SampleCollectionViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71829541CB6A9696A5B92A38 /* Pods_SampleCollectionView_SampleCollectionViewUITests.framework */; };
 		0F2A2B05848D768B5D08FB7F /* Pods_SampleCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE55B4705F0D5DC361443F20 /* Pods_SampleCollectionView.framework */; };
+		B620A17024CC99C00030501B /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B620A16F24CC99C00030501B /* UICollectionViewCell+.swift */; };
+		B63805DC248CC56500CB0794 /* MyCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63805DB248CC56500CB0794 /* MyCollectionViewCell2.xib */; };
+		B63805DE248CC57100CB0794 /* MyCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63805DD248CC57100CB0794 /* MyCollectionViewCell2.swift */; };
+		B63805E1248CC9B600CB0794 /* Sample5Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63805E0248CC9B600CB0794 /* Sample5Collection.storyboard */; };
+		B63805E3248CC9C800CB0794 /* Sample5CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63805E2248CC9C800CB0794 /* Sample5CollectionViewController.swift */; };
+		B63805F1248FDAE600CB0794 /* Sample6Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63805F0248FDAE600CB0794 /* Sample6Collection.storyboard */; };
+		B63805F3248FDAF000CB0794 /* Sample6CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63805F2248FDAF000CB0794 /* Sample6CollectionViewController.swift */; };
 		B669038C248BBAB2005305BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669038B248BBAB2005305BD /* AppDelegate.swift */; };
 		B6690390248BBAB2005305BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669038F248BBAB2005305BD /* ViewController.swift */; };
 		B6690393248BBAB2005305BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6690391248BBAB2005305BD /* Main.storyboard */; };
@@ -27,6 +34,7 @@
 		B66903E4248CA813005305BD /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66903E3248CA813005305BD /* MyCollectionViewCell.swift */; };
 		B66903E7248CB9F7005305BD /* Sample4Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66903E6248CB9F7005305BD /* Sample4Collection.storyboard */; };
 		B66903E9248CBA10005305BD /* Sample4CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66903E8248CBA10005305BD /* Sample4CollectionViewController.swift */; };
+		B6ECA04D24CC15F500368E41 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ECA04C24CC15F500368E41 /* UICollectionView+.swift */; };
 		F8EA406658F7D6D6F38D34FF /* Pods_SampleCollectionViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20030CF01BDC5034974DDB9C /* Pods_SampleCollectionViewTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +63,13 @@
 		89F72E91E6DC6F27A2CA2F04 /* Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView-SampleCollectionViewUITests/Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4F1D85A84A1ACA354C867D1 /* Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView-SampleCollectionViewUITests/Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B26FD9921906EBEC7A20B250 /* Pods-SampleCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView.release.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView/Pods-SampleCollectionView.release.xcconfig"; sourceTree = "<group>"; };
+		B620A16F24CC99C00030501B /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		B63805DB248CC56500CB0794 /* MyCollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell2.xib; sourceTree = "<group>"; };
+		B63805DD248CC57100CB0794 /* MyCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell2.swift; sourceTree = "<group>"; };
+		B63805E0248CC9B600CB0794 /* Sample5Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample5Collection.storyboard; sourceTree = "<group>"; };
+		B63805E2248CC9C800CB0794 /* Sample5CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample5CollectionViewController.swift; sourceTree = "<group>"; };
+		B63805F0248FDAE600CB0794 /* Sample6Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample6Collection.storyboard; sourceTree = "<group>"; };
+		B63805F2248FDAF000CB0794 /* Sample6CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample6CollectionViewController.swift; sourceTree = "<group>"; };
 		B6690388248BBAB2005305BD /* SampleCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B669038B248BBAB2005305BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B669038F248BBAB2005305BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +94,7 @@
 		B66903E3248CA813005305BD /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		B66903E6248CB9F7005305BD /* Sample4Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample4Collection.storyboard; sourceTree = "<group>"; };
 		B66903E8248CBA10005305BD /* Sample4CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample4CollectionViewController.swift; sourceTree = "<group>"; };
+		B6ECA04C24CC15F500368E41 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		D3E6E8AFE722FCD5A277F014 /* Pods-SampleCollectionViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionViewTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleCollectionViewTests/Pods-SampleCollectionViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE55B4705F0D5DC361443F20 /* Pods_SampleCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +150,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B63805DA248CC54E00CB0794 /* MyCollectionViewCell2 */ = {
+			isa = PBXGroup;
+			children = (
+				B63805DB248CC56500CB0794 /* MyCollectionViewCell2.xib */,
+				B63805DD248CC57100CB0794 /* MyCollectionViewCell2.swift */,
+			);
+			path = MyCollectionViewCell2;
+			sourceTree = "<group>";
+		};
+		B63805DF248CC99C00CB0794 /* Sample5 */ = {
+			isa = PBXGroup;
+			children = (
+				B63805E0248CC9B600CB0794 /* Sample5Collection.storyboard */,
+				B63805E2248CC9C800CB0794 /* Sample5CollectionViewController.swift */,
+			);
+			path = Sample5;
+			sourceTree = "<group>";
+		};
+		B63805EF248FDACF00CB0794 /* Sample6 */ = {
+			isa = PBXGroup;
+			children = (
+				B63805F0248FDAE600CB0794 /* Sample6Collection.storyboard */,
+				B63805F2248FDAF000CB0794 /* Sample6CollectionViewController.swift */,
+			);
+			path = Sample6;
+			sourceTree = "<group>";
+		};
 		B669037F248BBAB2005305BD = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +202,7 @@
 		B669038A248BBAB2005305BD /* SampleCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				B6ECA04B24CC14E400368E41 /* Extension */,
 				B66903C3248BBC78005305BD /* View */,
 				B66903C2248BBC6B005305BD /* ViewController */,
 				B66903C1248BBC66005305BD /* Model */,
@@ -219,6 +263,8 @@
 		B66903C2248BBC6B005305BD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B63805EF248FDACF00CB0794 /* Sample6 */,
+				B63805DF248CC99C00CB0794 /* Sample5 */,
 				B66903E5248CB9A6005305BD /* Sample4 */,
 				B66903D9248CA55B005305BD /* Sample3 */,
 				B66903C0248BBB9C005305BD /* Sample2 */,
@@ -230,6 +276,7 @@
 		B66903C3248BBC78005305BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B63805DA248CC54E00CB0794 /* MyCollectionViewCell2 */,
 				B66903E0248CA749005305BD /* MyCollectionViewCell */,
 			);
 			path = View;
@@ -260,6 +307,15 @@
 				B66903E8248CBA10005305BD /* Sample4CollectionViewController.swift */,
 			);
 			path = Sample4;
+			sourceTree = "<group>";
+		};
+		B6ECA04B24CC14E400368E41 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECA04C24CC15F500368E41 /* UICollectionView+.swift */,
+				B620A16F24CC99C00030501B /* UICollectionViewCell+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,11 +427,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63805E1248CC9B600CB0794 /* Sample5Collection.storyboard in Resources */,
+				B63805DC248CC56500CB0794 /* MyCollectionViewCell2.xib in Resources */,
 				B66903BD248BBAFA005305BD /* Sample1Collection.storyboard in Resources */,
 				B6690398248BBAB5005305BD /* LaunchScreen.storyboard in Resources */,
 				B66903DD248CA5D4005305BD /* Sample3Collection.storyboard in Resources */,
 				B6690395248BBAB5005305BD /* Assets.xcassets in Resources */,
 				B66903D6248BFDD5005305BD /* Sample2Collection.storyboard in Resources */,
+				B63805F1248FDAE600CB0794 /* Sample6Collection.storyboard in Resources */,
 				B66903E7248CB9F7005305BD /* Sample4Collection.storyboard in Resources */,
 				B66903E2248CA767005305BD /* MyCollectionViewCell.xib in Resources */,
 				B6690393248BBAB2005305BD /* Main.storyboard in Resources */,
@@ -508,12 +567,17 @@
 			files = (
 				B66903DF248CA5DD005305BD /* Sample3CollectionViewController.swift in Sources */,
 				B66903E9248CBA10005305BD /* Sample4CollectionViewController.swift in Sources */,
+				B63805F3248FDAF000CB0794 /* Sample6CollectionViewController.swift in Sources */,
 				B6690390248BBAB2005305BD /* ViewController.swift in Sources */,
 				B66903E4248CA813005305BD /* MyCollectionViewCell.swift in Sources */,
+				B63805E3248CC9C800CB0794 /* Sample5CollectionViewController.swift in Sources */,
 				B669038C248BBAB2005305BD /* AppDelegate.swift in Sources */,
 				B66903BF248BBB15005305BD /* Sample1CollectionViewController.swift in Sources */,
 				B66903D8248BFDE2005305BD /* Sample2CollectionViewController.swift in Sources */,
+				B620A17024CC99C00030501B /* UICollectionViewCell+.swift in Sources */,
 				B66903C5248BBC86005305BD /* SampleModel.swift in Sources */,
+				B6ECA04D24CC15F500368E41 /* UICollectionView+.swift in Sources */,
+				B63805DE248CC57100CB0794 /* MyCollectionViewCell2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

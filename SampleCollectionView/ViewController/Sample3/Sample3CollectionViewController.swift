@@ -12,12 +12,9 @@ import UIKit
 
 final class Sample3CollectionViewController: UIViewController {
 
-  typealias Cell = UICollectionViewCell
-  private let CellID = String(describing: Cell.self)
-
   @IBOutlet private weak var collectionView: UICollectionView! {
     didSet {
-      collectionView.register(Cell.self, forCellWithReuseIdentifier: CellID)
+      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.reuseIdentifier)
     }
   }
 }
@@ -26,12 +23,12 @@ extension Sample3CollectionViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     //セクションごとのセルの数
     //この例ではセクション数の指定がないので1セクションでそこに100セルある
-    return 100
+    return 15
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     //セルの再利用
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID, for: indexPath)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.reuseIdentifier, for: indexPath)
     //indexPathで背景色を変えてみた
     switch indexPath.item % 5 {
     case 0:
@@ -50,14 +47,26 @@ extension Sample3CollectionViewController: UICollectionViewDataSource {
     return cell
   }
 }
+
 /*
  UICollectionViewDelegateFlowLayoutを継承して大きさを変えるメソッドを実装する
  indexPathごとに呼ばれるのでCellごとに大きさを変えることができる
  */
 extension Sample3CollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let width = 100
-    let height = (indexPath.item % 5 + 1) * 50
+    guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return .zero }
+
+    let num: CGFloat = 3
+    let a = collectionView.frame.width - collectionView.contentInset.left - collectionView.contentInset.right -
+        (num - 1) * flowLayout.minimumInteritemSpacing
+
+    let width: CGFloat = CGFloat(Int(a / num))
+    let height: CGFloat = CGFloat((indexPath.item % 5 + 1) * 50)
+
+    print(collectionView.frame.width)
+    print(flowLayout.minimumInteritemSpacing)
+    print(width)
+
     return CGSize(width: width, height: height)
   }
 }
