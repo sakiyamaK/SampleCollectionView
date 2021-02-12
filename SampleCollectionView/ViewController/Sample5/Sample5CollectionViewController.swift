@@ -19,6 +19,11 @@ final class Sample5CollectionViewController: UIViewController {
   }
 
   let items = SampleModel.demoData
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    collectionView.reloadData()
+  }
 }
 
 extension Sample5CollectionViewController: UICollectionViewDataSource {
@@ -38,12 +43,11 @@ extension Sample5CollectionViewController: UICollectionViewDataSource {
   }
 }
 
-extension Sample5CollectionViewController: UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let width:CGFloat = 200
+//extension Sample5CollectionViewController: UICollectionViewDelegateFlowLayout {
+//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //    let item = items[indexPath.item]
-//    let size = Cell.calcSize(width: width, sampleModel: item)
-    return CGSize(width: width, height: 0)
-  }
-}
+//    let size = MyCollectionViewCell2.calcSize(width: 150, sampleModel: item, indexPath: indexPath)
+//    return size
+//  }
+//}
 

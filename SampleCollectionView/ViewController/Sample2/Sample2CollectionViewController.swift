@@ -46,6 +46,18 @@ final class Sample2CollectionViewController: UIViewController {
         layout.footerReferenceSize = CGSize.init(width: 100, height: 100)
       }
       collectionView.collectionViewLayout = layout
+
+
+      //CollectionViewではないが親クラスのScrollViewに備わっている機能
+      do {
+        //レイアウトが決まってからじゃないとoffsetの位置は決めようがないので3秒後に動かしている
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+          self.collectionView.contentOffset = CGPoint(x: -10, y: 200)
+          // アニメーションさせたいならこのメソッド
+//          self.collectionView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
+        }
+        collectionView.contentInset = UIEdgeInsets.init(top: 100, left: 10, bottom: 100, right: 10)
+      }
     }
   }
 }
@@ -58,6 +70,7 @@ extension Sample2CollectionViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    print(collectionView.contentOffset)
     //セルの再利用
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.reuseIdentifier, for: indexPath)
     //indexPathで背景色を変えてみた

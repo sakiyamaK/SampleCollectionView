@@ -34,6 +34,7 @@
 		B66903E4248CA813005305BD /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66903E3248CA813005305BD /* MyCollectionViewCell.swift */; };
 		B66903E7248CB9F7005305BD /* Sample4Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66903E6248CB9F7005305BD /* Sample4Collection.storyboard */; };
 		B66903E9248CBA10005305BD /* Sample4CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66903E8248CBA10005305BD /* Sample4CollectionViewController.swift */; };
+		B694829925D67F5400011F98 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694829825D67F5400011F98 /* PinterestLayout.swift */; };
 		B6ECA04D24CC15F500368E41 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ECA04C24CC15F500368E41 /* UICollectionView+.swift */; };
 		F8EA406658F7D6D6F38D34FF /* Pods_SampleCollectionViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20030CF01BDC5034974DDB9C /* Pods_SampleCollectionViewTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		B66903E3248CA813005305BD /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		B66903E6248CB9F7005305BD /* Sample4Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample4Collection.storyboard; sourceTree = "<group>"; };
 		B66903E8248CBA10005305BD /* Sample4CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample4CollectionViewController.swift; sourceTree = "<group>"; };
+		B694829825D67F5400011F98 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		B6ECA04C24CC15F500368E41 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		D3E6E8AFE722FCD5A277F014 /* Pods-SampleCollectionViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionViewTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleCollectionViewTests/Pods-SampleCollectionViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE55B4705F0D5DC361443F20 /* Pods_SampleCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,6 +278,7 @@
 		B66903C3248BBC78005305BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B694829825D67F5400011F98 /* PinterestLayout.swift */,
 				B63805DA248CC54E00CB0794 /* MyCollectionViewCell2 */,
 				B66903E0248CA749005305BD /* MyCollectionViewCell */,
 			);
@@ -575,6 +578,7 @@
 				B66903BF248BBB15005305BD /* Sample1CollectionViewController.swift in Sources */,
 				B66903D8248BFDE2005305BD /* Sample2CollectionViewController.swift in Sources */,
 				B620A17024CC99C00030501B /* UICollectionViewCell+.swift in Sources */,
+				B694829925D67F5400011F98 /* PinterestLayout.swift in Sources */,
 				B66903C5248BBC86005305BD /* SampleModel.swift in Sources */,
 				B6ECA04D24CC15F500368E41 /* UICollectionView+.swift in Sources */,
 				B63805DE248CC57100CB0794 /* MyCollectionViewCell2.swift in Sources */,

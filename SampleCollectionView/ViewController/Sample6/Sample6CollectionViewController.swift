@@ -15,7 +15,7 @@ final class Sample6CollectionViewController: UIViewController {
   @IBOutlet private weak var collectionView: UICollectionView! {
     didSet {
       collectionView.register(MyCollectionViewCell2.nib, forCellWithReuseIdentifier: MyCollectionViewCell2.reuseIdentifier)
-//      collectionView.adaptBeautifulGrid()
+//      collectionView.collectionViewLayout = PinterestLayout()
     }
   }
 

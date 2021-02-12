@@ -11,7 +11,6 @@ import Kingfisher
 
 final class MyCollectionViewCell2: UICollectionViewCell {
 
-  static var nib: UINib { UINib.init(nibName: String(describing: MyCollectionViewCell2.self), bundle: nil) }
   private static var mockCell: MyCollectionViewCell2 = nib.instantiate(withOwner: self, options: nil).first as! MyCollectionViewCell2
 
   @IBOutlet private weak var titleLabel: UILabel!
@@ -55,7 +54,7 @@ final class MyCollectionViewCell2: UICollectionViewCell {
     layoutIfNeeded()
   }
 
-  static func calcSize(width: CGFloat, sampleModel: SampleModel) -> CGSize {
+  static func calcSize(width: CGFloat, sampleModel: SampleModel, indexPath: IndexPath = IndexPath(row: 0, section: 0)) -> CGSize {
 
     //まず横幅を大きめのwidthを指定して誓約に合わせてレイアウト更新する
     mockCell.bounds.size.width = width
@@ -74,6 +73,8 @@ final class MyCollectionViewCell2: UICollectionViewCell {
 //      verticalFittingPriority: .fittingSizeLevel
 //    )
 
+    print("---------")
+    print(indexPath)
     print(size)
     // 得られたサイズを返す
     return size

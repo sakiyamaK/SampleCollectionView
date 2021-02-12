@@ -9,5 +9,7 @@
 import UIKit
 
 extension UICollectionViewCell {
+  static var nib: UINib { UINib.init(nibName: String(describing: Self.self), bundle: nil) }
+
   static var reuseIdentifier:String { String(describing: Self.self) }
 }
