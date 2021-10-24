@@ -1,29 +1,39 @@
 //
-//  Sample1CollectionViewController.swift
+//  DummyCollectionViewController.swift
 //  SampleCollectionView
 //
-//  Created by sakiyamaK on 2020/06/06.
-//  Copyright © 2020 sakiyamaK. All rights reserved.
+//  Created by sakiyamaK on 2021/10/22.
+//  Copyright © 2021 sakiyamaK. All rights reserved.
 //
-
-//UICollectionViewを使った最小実装
 
 import UIKit
 
-final class Sample1CollectionViewController: UIViewController {
+final class DummyCollectionViewController: UIViewController {
 
-    @IBOutlet private(set) weak var collectionView: UICollectionView! {
+    var scrollView: UIScrollView { collectionView }
+
+    var itemCount: Int = 100
+
+    
+    @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.reuseIdentifier)
+            collectionView.dataSource = self
+            collectionView.delegate = self
         }
     }
+
+    func reloadData(itemCount: Int) {
+        self.itemCount = itemCount
+        collectionView.reloadData()
+    }
+}
+extension DummyCollectionViewController: UICollectionViewDelegate {
 }
 
-extension Sample1CollectionViewController: UICollectionViewDataSource {
+extension DummyCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //セクションごとのセルの数
-        //この例ではセクション数の指定がないので1セクションでそこに100セルある
-        return 100
+        return itemCount
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,3 +57,4 @@ extension Sample1CollectionViewController: UICollectionViewDataSource {
         return cell
     }
 }
+

@@ -50,13 +50,13 @@ final class Sample2CollectionViewController: UIViewController {
 
       //CollectionViewではないが親クラスのScrollViewに備わっている機能
       do {
+        collectionView.contentInset = UIEdgeInsets.init(top: 100, left: 10, bottom: 100, right: 10)
         //レイアウトが決まってからじゃないとoffsetの位置は決めようがないので3秒後に動かしている
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-          self.collectionView.contentOffset = CGPoint(x: -10, y: 200)
+//          self.collectionView.contentOffset = CGPoint(x: -10, y: 200)
           // アニメーションさせたいならこのメソッド
-//          self.collectionView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
+          self.collectionView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
         }
-        collectionView.contentInset = UIEdgeInsets.init(top: 100, left: 10, bottom: 100, right: 10)
       }
     }
   }
