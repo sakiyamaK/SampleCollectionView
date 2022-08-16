@@ -28,7 +28,7 @@ enum SegueButton: String, CaseIterable {
         case .stoppableHeaderPageCollection:
             let tab = UITabBarController()
             let appearance = UITabBarAppearance()
-            appearance.backgroundColor =  UIColor.white
+            appearance.backgroundColor = UIColor.white
             tab.tabBar.standardAppearance = appearance
             if #available(iOS 15.0, *) {
                 tab.tabBar.scrollEdgeAppearance = appearance
@@ -60,15 +60,13 @@ enum SegueButton: String, CaseIterable {
     }
 }
 
-
 final class MainViewController: UIViewController {
-
-    @IBOutlet private weak var stackView: UIStackView! {
+    @IBOutlet private var stackView: UIStackView! {
         didSet {
-            SegueButton.allCases.map({$0.button}).forEach({ button in
+            SegueButton.allCases.map { $0.button }.forEach { button in
                 button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
                 stackView.addArrangedSubview(button)
-            })
+            }
         }
     }
 
@@ -77,28 +75,27 @@ final class MainViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .white
-        self.navigationController?.navigationBar.standardAppearance = appearance
-        self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
     }
 }
-
 
 @objc extension MainViewController {
     func tapButton(_ sender: UIButton) {
         guard let text = sender.titleLabel?.text else { return }
         SegueButton(rawValue: text)?.segue(viewController: self)
     }
+
     func tapStoppableHeaderPageCollectionButton() {
         let tab = UITabBarController()
         let appearance = UITabBarAppearance()
-        appearance.backgroundColor =  UIColor.white
+        appearance.backgroundColor = UIColor.white
         tab.tabBar.standardAppearance = appearance
         if #available(iOS 15.0, *) {
             tab.tabBar.scrollEdgeAppearance = appearance
         }
         let vc = UIStoryboard.stoppableHeaderPageCollection
         tab.setViewControllers([vc], animated: false)
-        self.navigationController?.pushViewController(tab, animated: true)
+        navigationController?.pushViewController(tab, animated: true)
     }
 }
-

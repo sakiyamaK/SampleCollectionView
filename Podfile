@@ -6,7 +6,12 @@ target 'SampleCollectionView' do
   use_frameworks!
 
   # Pods for SampleCollectionView
+  pod 'R.swift'
   pod "Kingfisher"
+  pod "IQKeyboardManagerSwift"
+  pod "SnapKit"
+  pod "Hero"
+  pod "DeclarativeUIKit", git:"https://github.com/sakiyamaK/DeclarativeUIKit.git"
 
   target 'SampleCollectionViewTests' do
     inherit! :search_paths

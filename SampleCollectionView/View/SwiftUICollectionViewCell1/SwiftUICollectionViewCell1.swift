@@ -10,7 +10,6 @@ import SwiftUI
 import UIKit
 
 final class SwiftUICollectionViewCell1: HostingCell<SwiftUICollectionViewCell1View> {
-
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -26,5 +25,4 @@ final class SwiftUICollectionViewCell1: HostingCell<SwiftUICollectionViewCell1Vi
         contentView.backgroundColor = .secondarySystemGroupedBackground
         contentView.layer.cornerRadius = 16
     }
-
 }

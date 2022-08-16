@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct SwiftUICollectionViewCell1View: HostingCellContent {
-
     typealias Dependency = SwiftUICollectionViewCell1ViewDependency
 
     struct SwiftUICollectionViewCell1ViewDependency {
@@ -35,8 +34,8 @@ struct SwiftUICollectionViewCell1View: HostingCellContent {
         }
         .padding(12)
     }
-
 }
+
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SwiftUICollectionViewCell1View(.init(text: "hoge", subText: "hage"))

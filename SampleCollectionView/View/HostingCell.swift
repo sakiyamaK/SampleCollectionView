@@ -16,7 +16,6 @@ protocol HostingCellContent: View {
 }
 
 class HostingCell<Content: HostingCellContent>: UICollectionViewCell {
-
     private let hostingController = UIHostingController<Content?>(rootView: nil)
 
     override public init(frame: CGRect) {
@@ -26,7 +25,7 @@ class HostingCell<Content: HostingCellContent>: UICollectionViewCell {
     }
 
     @available(*, unavailable)
-    public required init?(coder: NSCoder) {
+    public required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -46,5 +45,4 @@ class HostingCell<Content: HostingCellContent>: UICollectionViewCell {
         ])
         hostingController.didMove(toParent: parent)
     }
-
 }
