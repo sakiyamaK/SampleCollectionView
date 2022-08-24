@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0643F477BB9B43E07551D160 /* Pods_SampleCollectionView_SampleCollectionViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71829541CB6A9696A5B92A38 /* Pods_SampleCollectionView_SampleCollectionViewUITests.framework */; };
 		0F2A2B05848D768B5D08FB7F /* Pods_SampleCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE55B4705F0D5DC361443F20 /* Pods_SampleCollectionView.framework */; };
+		B662E7EA28B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662E7E928B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift */; };
+		B662E7EC28B6712F0066B06D /* UICompositionalLayout+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662E7EB28B6712F0066B06D /* UICompositionalLayout+.swift */; };
 		B669038C248BBAB2005305BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669038B248BBAB2005305BD /* AppDelegate.swift */; };
 		B6690390248BBAB2005305BD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669038F248BBAB2005305BD /* RootViewController.swift */; };
 		B6690395248BBAB5005305BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6690394248BBAB5005305BD /* Assets.xcassets */; };
@@ -121,6 +123,8 @@
 		89F72E91E6DC6F27A2CA2F04 /* Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView-SampleCollectionViewUITests/Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4F1D85A84A1ACA354C867D1 /* Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView-SampleCollectionViewUITests/Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B26FD9921906EBEC7A20B250 /* Pods-SampleCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView.release.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView/Pods-SampleCollectionView.release.xcconfig"; sourceTree = "<group>"; };
+		B662E7E928B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfalCompositionallLayoutCollectionViewController.swift; sourceTree = "<group>"; };
+		B662E7EB28B6712F0066B06D /* UICompositionalLayout+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICompositionalLayout+.swift"; sourceTree = "<group>"; };
 		B6690388248BBAB2005305BD /* SampleCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B669038B248BBAB2005305BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B669038F248BBAB2005305BD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -435,6 +439,7 @@
 				B6EFEA4C28AB9CFD00A443DA /* CompositionalLayout09ViewController.swift */,
 				B6EFEA4E28AB9CFD00A443DA /* DiffableDataSources01ViewController.swift */,
 				B6EFEA5228AB9CFD00A443DA /* DiffableDataSources02ViewController.swift */,
+				B662E7E928B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -664,6 +669,7 @@
 				B6EFEAEA28ABA00800A443DA /* UICollectionView+.swift */,
 				B6EFEAEB28ABA00800A443DA /* UIScrollView+.swift */,
 				B6EFEAEC28ABA00800A443DA /* UIKit+SwiftUI.swift */,
+				B662E7EB28B6712F0066B06D /* UICompositionalLayout+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -962,6 +968,7 @@
 				B6EFEAB628AB9CFE00A443DA /* MosaicLayout.swift in Sources */,
 				B6EFEA9128AB9CFE00A443DA /* DiffableDataSources01ViewController.swift in Sources */,
 				B6690390248BBAB2005305BD /* RootViewController.swift in Sources */,
+				B662E7EC28B6712F0066B06D /* UICompositionalLayout+.swift in Sources */,
 				B6EFEAB428AB9CFE00A443DA /* MosaicCollectionViewController.swift in Sources */,
 				B6EFEABB28AB9CFE00A443DA /* SwiftUICellCollectionViewController.swift in Sources */,
 				B6EFEAF228ABA00800A443DA /* UIScrollView+.swift in Sources */,
@@ -993,6 +1000,7 @@
 				B6EFEAD628AB9EA400A443DA /* UICollectionHeaderView01.swift in Sources */,
 				B6EFEAA228AB9CFE00A443DA /* StoppableHeaderPageCollectionViewController.swift in Sources */,
 				B6EFEA9F28AB9CFE00A443DA /* Sample3CollectionViewController.swift in Sources */,
+				B662E7EA28B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift in Sources */,
 				B6EFEA9A28AB9CFE00A443DA /* Sample5CollectionViewController.swift in Sources */,
 				B6EFEA9028AB9CFE00A443DA /* CompositionalLayout08ViewController.swift in Sources */,
 				B6EFEAD828AB9EA400A443DA /* UICollectionViewCell01.swift in Sources */,

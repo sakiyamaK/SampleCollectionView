@@ -11,6 +11,7 @@ import DeclarativeUIKit
 
 enum ViewType: String, CaseIterable {
     
+    case WaterfalCompositionallLayout
     case CompositionalLayout09
     case CompositionalLayout08
     case AppStore
@@ -63,6 +64,8 @@ enum ViewType: String, CaseIterable {
             return DiffableDataSources02ViewController()
         case .AppStore:
             return R.storyboard.appStoreTop().instantiateInitialViewController()!
+        case .WaterfalCompositionallLayout:
+            return WaterfalCompositionallLayoutCollectionViewController()
         default:
             let sb = UIStoryboard(name: self.rawValue, bundle: nil)
             return sb.instantiateInitialViewController()!

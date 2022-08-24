@@ -38,8 +38,21 @@ final class UIImageViewCell: UICollectionViewCell {
     }
 
     @discardableResult
-    func configure(sample: SampleImageModel, cornerRadius _: CGFloat = 0) -> Self {
+    func configure(sample: SampleImageModel, cornerRadius: CGFloat = 0) -> Self {
         imageView.image = sample.image
+        contentView.cornerRadius(cornerRadius)
         return self
+    }
+
+    static private let mock: UIImageViewCell = .init(frame: .zero)
+    static func calcSize(width: CGFloat, sample: SampleImageModel, cornerRadius: CGFloat = 0) -> CGSize {
+        let targetSize = CGSize(width: width, height: .greatestFiniteMagnitude)
+        mock.frame.size = targetSize
+        mock.prepareForReuse()
+        return mock.configure(sample: sample, cornerRadius: cornerRadius).contentView.systemLayoutSizeFitting(
+            targetSize,
+            withHorizontalFittingPriority: .required,
+            verticalFittingPriority: .fittingSizeLevel)
+
     }
 }
