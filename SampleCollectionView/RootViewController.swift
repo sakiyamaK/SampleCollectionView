@@ -11,10 +11,12 @@ import DeclarativeUIKit
 
 enum ViewType: String, CaseIterable {
     
-    case WaterfalCompositionallLayout
-    case CompositionalLayout09
-    case CompositionalLayout08
-    case AppStore
+    case Sample1
+    case Sample2
+    case Sample3
+    case Sample4
+    case Sample5
+    case Sample6
     case CompositionalLayout01
     case CompositionalLayout02
     case CompositionalLayout03
@@ -22,53 +24,61 @@ enum ViewType: String, CaseIterable {
     case CompositionalLayout05
     case CompositionalLayout06
     case CompositionalLayout07
+    case CompositionalLayout08
+    case CompositionalLayout09
     case DiffableDataSources01
     case DiffableDataSources02
     case VHScrollCollection
-    case Sample1Collection
-    case Sample2Collection
-    case Sample3Collection
-    case Sample4Collection
-    case Sample5Collection
-    case Sample6Collection
-    case Sample7Collection
     case StoppableHeaderCollection
     case StoppableHeaderPageCollection
     case WWDC2018
-    
+    case WaterfalCompositionallLayout
+    case AppStore
+
     var viewController: UIViewController {
         switch self {
+        case .Sample1:
+            R.storyboard.sample1Collection(bundle: .main).instantiateInitialViewController()!
+        case .Sample2:
+            R.storyboard.sample2Collection(bundle: .main).instantiateInitialViewController()!
+        case .Sample3:
+            R.storyboard.sample3Collection(bundle: .main).instantiateInitialViewController()!
+        case .Sample4:
+            R.storyboard.sample4Collection(bundle: .main).instantiateInitialViewController()!
+        case .Sample5:
+            R.storyboard.sample5Collection(bundle: .main).instantiateInitialViewController()!
+        case .Sample6:
+            R.storyboard.sample6Collection(bundle: .main).instantiateInitialViewController()!
         case .WWDC2018:
-            return R.storyboard.mosaicCollection().instantiateInitialViewController()!
+            R.storyboard.mosaicCollection(bundle: .main).instantiateInitialViewController()!
         case .CompositionalLayout01:
-            return CompositionalLayout01ViewController()
+            CompositionalLayout01ViewController()
         case .CompositionalLayout02:
-            return CompositionalLayout02ViewController()
+            CompositionalLayout02ViewController()
         case .CompositionalLayout03:
-            return CompositionalLayout03ViewController()
+            CompositionalLayout03ViewController()
         case .CompositionalLayout04:
-            return CompositionalLayout04ViewController()
+            CompositionalLayout04ViewController()
         case .CompositionalLayout05:
-            return CompositionalLayout05ViewController()
+            CompositionalLayout05ViewController()
         case .CompositionalLayout06:
-            return CompositionalLayout06ViewController()
+            CompositionalLayout06ViewController()
         case .CompositionalLayout07:
-            return CompositionalLayout07ViewController()
+            CompositionalLayout07ViewController()
         case .CompositionalLayout08:
-            return CompositionalLayout08ViewController()
+            CompositionalLayout08ViewController()
         case .CompositionalLayout09:
-            return CompositionalLayout09ViewController()
+            CompositionalLayout09ViewController()
         case .DiffableDataSources01:
-            return DiffableDataSources01ViewController()
+            DiffableDataSources01ViewController()
         case .DiffableDataSources02:
-            return DiffableDataSources02ViewController()
+            DiffableDataSources02ViewController()
         case .AppStore:
-            return R.storyboard.appStoreTop().instantiateInitialViewController()!
+            R.storyboard.appStoreTop(bundle: .main).instantiateInitialViewController()!
         case .WaterfalCompositionallLayout:
-            return WaterfalCompositionallLayoutCollectionViewController()
+            WaterfalCompositionallLayoutCollectionViewController()
         default:
-            let sb = UIStoryboard(name: self.rawValue, bundle: nil)
-            return sb.instantiateInitialViewController()!
+            UIStoryboard(name: self.rawValue, bundle: nil).instantiateInitialViewController()!
         }
     }
     
@@ -90,18 +100,18 @@ final class RootViewController: UIViewController {
     override func loadView() {
         super.loadView()
 
-        self.view.backgroundColor = .white
-        self.navigationItem.title = "Root"
-        
-        self.declarative {
+        self.applyView({
+            $0.backgroundColor(.white)
+        }).applyNavigationItem({
+            $0.title = "Root"
+        }).declarative {
             UIScrollView.vertical {
                 UIStackView.vertical {
                     ViewType.allCases.compactMap({ $0.button(from: self).height(40) })
                 }
                 .spacing(20)
                 .distribution(.fillEqually)
-                .alignment(.center)
-                .center()
+                .padding(insets: .init(horizontal: 16))
             }
             .showsScrollIndicator(false)
         }

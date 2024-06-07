@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0643F477BB9B43E07551D160 /* Pods_SampleCollectionView_SampleCollectionViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71829541CB6A9696A5B92A38 /* Pods_SampleCollectionView_SampleCollectionViewUITests.framework */; };
-		0F2A2B05848D768B5D08FB7F /* Pods_SampleCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE55B4705F0D5DC361443F20 /* Pods_SampleCollectionView.framework */; };
+		B606BDB82C13C41C006FFA46 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = B606BDB72C13C41C006FFA46 /* RswiftLibrary */; };
+		B606BDBB2C13C543006FFA46 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = B606BDBA2C13C543006FFA46 /* Hero */; };
 		B662E7EA28B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662E7E928B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift */; };
 		B662E7EC28B6712F0066B06D /* UICompositionalLayout+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662E7EB28B6712F0066B06D /* UICompositionalLayout+.swift */; };
 		B669038C248BBAB2005305BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669038B248BBAB2005305BD /* AppDelegate.swift */; };
@@ -18,7 +19,9 @@
 		B66903A3248BBAB5005305BD /* SampleCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66903A2248BBAB5005305BD /* SampleCollectionViewTests.swift */; };
 		B66903AE248BBAB5005305BD /* SampleCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66903AD248BBAB5005305BD /* SampleCollectionViewUITests.swift */; };
 		B66903C5248BBC86005305BD /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66903C4248BBC86005305BD /* SampleModel.swift */; };
-		B6DD8331289E1ACD00DE7B68 /* ThreeDCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD8330289E1ACD00DE7B68 /* ThreeDCollectionViewController.swift */; };
+		B69E68262C08AF8A00C66642 /* DeclarativeUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = B69E68252C08AF8A00C66642 /* DeclarativeUIKit */; };
+		B69E68292C08AFBD00C66642 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B69E68282C08AFBD00C66642 /* SnapKit */; };
+		B6DD725C2B779F3D00E2BBA3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B6DD725B2B779F3D00E2BBA3 /* Kingfisher */; };
 		B6EFEA8828AB9CFE00A443DA /* AppStoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA3E28AB9CFD00A443DA /* AppStoreRouter.swift */; };
 		B6EFEA8928AB9CFE00A443DA /* AppStoreFullImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA4228AB9CFD00A443DA /* AppStoreFullImageView.swift */; };
 		B6EFEA8A28AB9CFE00A443DA /* AppStoreFullImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEA4328AB9CFD00A443DA /* AppStoreFullImageView.xib */; };
@@ -56,9 +59,6 @@
 		B6EFEAAA28AB9CFE00A443DA /* Sample1Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEA6F28AB9CFD00A443DA /* Sample1Collection.storyboard */; };
 		B6EFEAAB28AB9CFE00A443DA /* Sample6Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEA7128AB9CFD00A443DA /* Sample6Collection.storyboard */; };
 		B6EFEAAC28AB9CFE00A443DA /* Sample6CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA7228AB9CFD00A443DA /* Sample6CollectionViewController.swift */; };
-		B6EFEAAD28AB9CFE00A443DA /* SampleCollection7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA7428AB9CFD00A443DA /* SampleCollection7ViewController.swift */; };
-		B6EFEAAE28AB9CFE00A443DA /* SampleCollection7.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEA7528AB9CFD00A443DA /* SampleCollection7.storyboard */; };
-		B6EFEAAF28AB9CFE00A443DA /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA7628AB9CFD00A443DA /* ColumnFlowLayout.swift */; };
 		B6EFEAB028AB9CFE00A443DA /* VHScrollCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA7828AB9CFD00A443DA /* VHScrollCollectionViewController.swift */; };
 		B6EFEAB128AB9CFE00A443DA /* VHScrollLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA7928AB9CFD00A443DA /* VHScrollLayout.swift */; };
 		B6EFEAB228AB9CFE00A443DA /* VHScrollCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEA7A28AB9CFD00A443DA /* VHScrollCollection.storyboard */; };
@@ -69,12 +69,8 @@
 		B6EFEAB728AB9CFE00A443DA /* WaterfallLayoutCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA8228AB9CFD00A443DA /* WaterfallLayoutCollectionViewController.swift */; };
 		B6EFEAB828AB9CFE00A443DA /* WaterfallLayoutCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEA8328AB9CFD00A443DA /* WaterfallLayoutCollection.storyboard */; };
 		B6EFEAB928AB9CFE00A443DA /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA8428AB9CFD00A443DA /* WaterfallLayout.swift */; };
-		B6EFEABA28AB9CFE00A443DA /* SwiftUICellCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEA8628AB9CFD00A443DA /* SwiftUICellCollection.storyboard */; };
-		B6EFEABB28AB9CFE00A443DA /* SwiftUICellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEA8728AB9CFD00A443DA /* SwiftUICellCollectionViewController.swift */; };
 		B6EFEAD228AB9EA400A443DA /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6EFEABE28AB9EA400A443DA /* MyCollectionViewCell.xib */; };
 		B6EFEAD328AB9EA400A443DA /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEABF28AB9EA400A443DA /* MyCollectionViewCell.swift */; };
-		B6EFEAD428AB9EA400A443DA /* SwiftUICollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAC128AB9EA400A443DA /* SwiftUICollectionViewCell1.swift */; };
-		B6EFEAD528AB9EA400A443DA /* SwiftUICollectionViewCell1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAC228AB9EA400A443DA /* SwiftUICollectionViewCell1View.swift */; };
 		B6EFEAD628AB9EA400A443DA /* UICollectionHeaderView01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAC328AB9EA400A443DA /* UICollectionHeaderView01.swift */; };
 		B6EFEAD728AB9EA400A443DA /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAC428AB9EA400A443DA /* PinterestLayout.swift */; };
 		B6EFEAD828AB9EA400A443DA /* UICollectionViewCell01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAC528AB9EA400A443DA /* UICollectionViewCell01.swift */; };
@@ -94,7 +90,6 @@
 		B6EFEAF128ABA00800A443DA /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAEA28ABA00800A443DA /* UICollectionView+.swift */; };
 		B6EFEAF228ABA00800A443DA /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAEB28ABA00800A443DA /* UIScrollView+.swift */; };
 		B6EFEAF328ABA00800A443DA /* UIKit+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAEC28ABA00800A443DA /* UIKit+SwiftUI.swift */; };
-		B6EFEAF628ABA0DC00A443DA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EFEAF528ABA0DC00A443DA /* R.generated.swift */; };
 		F8EA406658F7D6D6F38D34FF /* Pods_SampleCollectionViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20030CF01BDC5034974DDB9C /* Pods_SampleCollectionViewTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,12 +112,7 @@
 
 /* Begin PBXFileReference section */
 		20030CF01BDC5034974DDB9C /* Pods_SampleCollectionViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCollectionViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47C9451FCB5255ACF5C706F8 /* Pods-SampleCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView.debug.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView/Pods-SampleCollectionView.debug.xcconfig"; sourceTree = "<group>"; };
 		71829541CB6A9696A5B92A38 /* Pods_SampleCollectionView_SampleCollectionViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCollectionView_SampleCollectionViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C1F7BF32879F1BD45D38A12 /* Pods-SampleCollectionViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionViewTests.release.xcconfig"; path = "Target Support Files/Pods-SampleCollectionViewTests/Pods-SampleCollectionViewTests.release.xcconfig"; sourceTree = "<group>"; };
-		89F72E91E6DC6F27A2CA2F04 /* Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView-SampleCollectionViewUITests/Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A4F1D85A84A1ACA354C867D1 /* Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView-SampleCollectionViewUITests/Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B26FD9921906EBEC7A20B250 /* Pods-SampleCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionView.release.xcconfig"; path = "Target Support Files/Pods-SampleCollectionView/Pods-SampleCollectionView.release.xcconfig"; sourceTree = "<group>"; };
 		B662E7E928B637EF0066B06D /* WaterfalCompositionallLayoutCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfalCompositionallLayoutCollectionViewController.swift; sourceTree = "<group>"; };
 		B662E7EB28B6712F0066B06D /* UICompositionalLayout+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICompositionalLayout+.swift"; sourceTree = "<group>"; };
 		B6690388248BBAB2005305BD /* SampleCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,7 +128,6 @@
 		B66903AD248BBAB5005305BD /* SampleCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewUITests.swift; sourceTree = "<group>"; };
 		B66903AF248BBAB5005305BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B66903C4248BBC86005305BD /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
-		B6DD8330289E1ACD00DE7B68 /* ThreeDCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDCollectionViewController.swift; sourceTree = "<group>"; };
 		B6EFEA3E28AB9CFD00A443DA /* AppStoreRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreRouter.swift; sourceTree = "<group>"; };
 		B6EFEA4228AB9CFD00A443DA /* AppStoreFullImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreFullImageView.swift; sourceTree = "<group>"; };
 		B6EFEA4328AB9CFD00A443DA /* AppStoreFullImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppStoreFullImageView.xib; sourceTree = "<group>"; };
@@ -176,9 +165,6 @@
 		B6EFEA6F28AB9CFD00A443DA /* Sample1Collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sample1Collection.storyboard; sourceTree = "<group>"; };
 		B6EFEA7128AB9CFD00A443DA /* Sample6Collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sample6Collection.storyboard; sourceTree = "<group>"; };
 		B6EFEA7228AB9CFD00A443DA /* Sample6CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample6CollectionViewController.swift; sourceTree = "<group>"; };
-		B6EFEA7428AB9CFD00A443DA /* SampleCollection7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollection7ViewController.swift; sourceTree = "<group>"; };
-		B6EFEA7528AB9CFD00A443DA /* SampleCollection7.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SampleCollection7.storyboard; sourceTree = "<group>"; };
-		B6EFEA7628AB9CFD00A443DA /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		B6EFEA7828AB9CFD00A443DA /* VHScrollCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHScrollCollectionViewController.swift; sourceTree = "<group>"; };
 		B6EFEA7928AB9CFD00A443DA /* VHScrollLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHScrollLayout.swift; sourceTree = "<group>"; };
 		B6EFEA7A28AB9CFD00A443DA /* VHScrollCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VHScrollCollection.storyboard; sourceTree = "<group>"; };
@@ -189,12 +175,8 @@
 		B6EFEA8228AB9CFD00A443DA /* WaterfallLayoutCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallLayoutCollectionViewController.swift; sourceTree = "<group>"; };
 		B6EFEA8328AB9CFD00A443DA /* WaterfallLayoutCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WaterfallLayoutCollection.storyboard; sourceTree = "<group>"; };
 		B6EFEA8428AB9CFD00A443DA /* WaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
-		B6EFEA8628AB9CFD00A443DA /* SwiftUICellCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SwiftUICellCollection.storyboard; sourceTree = "<group>"; };
-		B6EFEA8728AB9CFD00A443DA /* SwiftUICellCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUICellCollectionViewController.swift; sourceTree = "<group>"; };
 		B6EFEABE28AB9EA400A443DA /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		B6EFEABF28AB9EA400A443DA /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
-		B6EFEAC128AB9EA400A443DA /* SwiftUICollectionViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUICollectionViewCell1.swift; sourceTree = "<group>"; };
-		B6EFEAC228AB9EA400A443DA /* SwiftUICollectionViewCell1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUICollectionViewCell1View.swift; sourceTree = "<group>"; };
 		B6EFEAC328AB9EA400A443DA /* UICollectionHeaderView01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionHeaderView01.swift; sourceTree = "<group>"; };
 		B6EFEAC428AB9EA400A443DA /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		B6EFEAC528AB9EA400A443DA /* UICollectionViewCell01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell01.swift; sourceTree = "<group>"; };
@@ -214,8 +196,6 @@
 		B6EFEAEA28ABA00800A443DA /* UICollectionView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		B6EFEAEB28ABA00800A443DA /* UIScrollView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		B6EFEAEC28ABA00800A443DA /* UIKit+SwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+SwiftUI.swift"; sourceTree = "<group>"; };
-		B6EFEAF528ABA0DC00A443DA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		D3E6E8AFE722FCD5A277F014 /* Pods-SampleCollectionViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCollectionViewTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleCollectionViewTests/Pods-SampleCollectionViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE55B4705F0D5DC361443F20 /* Pods_SampleCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,7 +204,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2A2B05848D768B5D08FB7F /* Pods_SampleCollectionView.framework in Frameworks */,
+				B606BDB82C13C41C006FFA46 /* RswiftLibrary in Frameworks */,
+				B6DD725C2B779F3D00E2BBA3 /* Kingfisher in Frameworks */,
+				B69E68292C08AFBD00C66642 /* SnapKit in Frameworks */,
+				B606BDBB2C13C543006FFA46 /* Hero in Frameworks */,
+				B69E68262C08AF8A00C66642 /* DeclarativeUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,19 +231,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		246EBAB91B0365BD14A6A4DC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				47C9451FCB5255ACF5C706F8 /* Pods-SampleCollectionView.debug.xcconfig */,
-				B26FD9921906EBEC7A20B250 /* Pods-SampleCollectionView.release.xcconfig */,
-				89F72E91E6DC6F27A2CA2F04 /* Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig */,
-				A4F1D85A84A1ACA354C867D1 /* Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig */,
-				D3E6E8AFE722FCD5A277F014 /* Pods-SampleCollectionViewTests.debug.xcconfig */,
-				7C1F7BF32879F1BD45D38A12 /* Pods-SampleCollectionViewTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		6AE7DFC96D5324900A2EF66A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,9 +244,7 @@
 		B669037F248BBAB2005305BD = {
 			isa = PBXGroup;
 			children = (
-				B6EFEAF528ABA0DC00A443DA /* R.generated.swift */,
 				6AE7DFC96D5324900A2EF66A /* Frameworks */,
-				246EBAB91B0365BD14A6A4DC /* Pods */,
 				B6690389248BBAB2005305BD /* Products */,
 				B669038A248BBAB2005305BD /* SampleCollectionView */,
 				B66903A1248BBAB5005305BD /* SampleCollectionViewTests */,
@@ -340,8 +309,6 @@
 			children = (
 				B6EFEA3B28AB9CFD00A443DA /* CompositionalLayout */,
 				B6EFEA5728AB9CFD00A443DA /* Regacy */,
-				B6EFEA8528AB9CFD00A443DA /* SwiftUICellCollection */,
-				B6DD8330289E1ACD00DE7B68 /* ThreeDCollectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -367,18 +334,10 @@
 			isa = PBXGroup;
 			children = (
 				B6EFEA3E28AB9CFD00A443DA /* AppStoreRouter.swift */,
-				B6EFEA3F28AB9CFD00A443DA /* Model */,
 				B6EFEA4028AB9CFD00A443DA /* View */,
 				B6EFEA4428AB9CFD00A443DA /* ViewController */,
 			);
 			path = AppStore;
-			sourceTree = "<group>";
-		};
-		B6EFEA3F28AB9CFD00A443DA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B6EFEA4028AB9CFD00A443DA /* View */ = {
@@ -453,7 +412,6 @@
 				B6EFEA6128AB9CFD00A443DA /* Sample4 */,
 				B6EFEA5828AB9CFD00A443DA /* Sample5 */,
 				B6EFEA7028AB9CFD00A443DA /* Sample6 */,
-				B6EFEA7328AB9CFD00A443DA /* Sample7 */,
 				B6EFEA6928AB9CFD00A443DA /* StoppableHeaderCollection */,
 				B6EFEA6428AB9CFD00A443DA /* StoppableHeaderPageCollection */,
 				B6EFEA7728AB9CFD00A443DA /* VHScrollCollection */,
@@ -538,16 +496,6 @@
 			path = Sample6;
 			sourceTree = "<group>";
 		};
-		B6EFEA7328AB9CFD00A443DA /* Sample7 */ = {
-			isa = PBXGroup;
-			children = (
-				B6EFEA7428AB9CFD00A443DA /* SampleCollection7ViewController.swift */,
-				B6EFEA7528AB9CFD00A443DA /* SampleCollection7.storyboard */,
-				B6EFEA7628AB9CFD00A443DA /* ColumnFlowLayout.swift */,
-			);
-			path = Sample7;
-			sourceTree = "<group>";
-		};
 		B6EFEA7728AB9CFD00A443DA /* VHScrollCollection */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,20 +535,10 @@
 			path = WaterfallLayoutCollection;
 			sourceTree = "<group>";
 		};
-		B6EFEA8528AB9CFD00A443DA /* SwiftUICellCollection */ = {
-			isa = PBXGroup;
-			children = (
-				B6EFEA8628AB9CFD00A443DA /* SwiftUICellCollection.storyboard */,
-				B6EFEA8728AB9CFD00A443DA /* SwiftUICellCollectionViewController.swift */,
-			);
-			path = SwiftUICellCollection;
-			sourceTree = "<group>";
-		};
 		B6EFEABC28AB9EA400A443DA /* View */ = {
 			isa = PBXGroup;
 			children = (
 				B6EFEABD28AB9EA400A443DA /* MyCollectionViewCell */,
-				B6EFEAC028AB9EA400A443DA /* SwiftUICollectionViewCell1 */,
 				B6EFEAC328AB9EA400A443DA /* UICollectionHeaderView01.swift */,
 				B6EFEAC428AB9EA400A443DA /* PinterestLayout.swift */,
 				B6EFEAC528AB9EA400A443DA /* UICollectionViewCell01.swift */,
@@ -621,15 +559,6 @@
 				B6EFEABF28AB9EA400A443DA /* MyCollectionViewCell.swift */,
 			);
 			path = MyCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		B6EFEAC028AB9EA400A443DA /* SwiftUICollectionViewCell1 */ = {
-			isa = PBXGroup;
-			children = (
-				B6EFEAC128AB9EA400A443DA /* SwiftUICollectionViewCell1.swift */,
-				B6EFEAC228AB9EA400A443DA /* SwiftUICollectionViewCell1View.swift */,
-			);
-			path = SwiftUICollectionViewCell1;
 			sourceTree = "<group>";
 		};
 		B6EFEAC728AB9EA400A443DA /* UICollectionViewCell02 */ = {
@@ -681,18 +610,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B66903B2248BBAB5005305BD /* Build configuration list for PBXNativeTarget "SampleCollectionView" */;
 			buildPhases = (
-				EDF7F3FFDA83A1344E438FB8 /* [CP] Check Pods Manifest.lock */,
-				B6EFEAF428ABA0A700A443DA /* Run Script(R.swift) */,
 				B6690384248BBAB2005305BD /* Sources */,
 				B6690385248BBAB2005305BD /* Frameworks */,
 				B6690386248BBAB2005305BD /* Resources */,
-				8680DF13496B2F8537BB2E55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B606BDBD2C13C64C006FFA46 /* PBXTargetDependency */,
 			);
 			name = SampleCollectionView;
+			packageProductDependencies = (
+				B6DD725B2B779F3D00E2BBA3 /* Kingfisher */,
+				B69E68252C08AF8A00C66642 /* DeclarativeUIKit */,
+				B69E68282C08AFBD00C66642 /* SnapKit */,
+				B606BDB72C13C41C006FFA46 /* RswiftLibrary */,
+				B606BDBA2C13C543006FFA46 /* Hero */,
+			);
 			productName = SampleCollectionView;
 			productReference = B6690388248BBAB2005305BD /* SampleCollectionView.app */;
 			productType = "com.apple.product-type.application";
@@ -768,6 +702,13 @@
 				Base,
 			);
 			mainGroup = B669037F248BBAB2005305BD;
+			packageReferences = (
+				B6DD725A2B779F3D00E2BBA3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B69E68242C08AF8A00C66642 /* XCRemoteSwiftPackageReference "DeclarativeUIKit" */,
+				B69E68272C08AFBD00C66642 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B606BDB62C13C41C006FFA46 /* XCRemoteSwiftPackageReference "R" */,
+				B606BDB92C13C543006FFA46 /* XCRemoteSwiftPackageReference "Hero" */,
+			);
 			productRefGroup = B6690389248BBAB2005305BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -790,14 +731,12 @@
 				B6EFEAAA28AB9CFE00A443DA /* Sample1Collection.storyboard in Resources */,
 				B6EFEADB28AB9EA400A443DA /* UICollectionViewCell02.xib in Resources */,
 				B6EFEA8A28AB9CFE00A443DA /* AppStoreFullImageView.xib in Resources */,
-				B6EFEABA28AB9CFE00A443DA /* SwiftUICellCollection.storyboard in Resources */,
 				B6690398248BBAB5005305BD /* LaunchScreen.storyboard in Resources */,
 				B6EFEAB228AB9CFE00A443DA /* VHScrollCollection.storyboard in Resources */,
 				B6EFEAD228AB9EA400A443DA /* MyCollectionViewCell.xib in Resources */,
 				B6690395248BBAB5005305BD /* Assets.xcassets in Resources */,
 				B6EFEA9B28AB9CFE00A443DA /* Sample5Collection.storyboard in Resources */,
 				B6EFEAA128AB9CFE00A443DA /* Sample4Collection.storyboard in Resources */,
-				B6EFEAAE28AB9CFE00A443DA /* SampleCollection7.storyboard in Resources */,
 				B6EFEAAB28AB9CFE00A443DA /* Sample6Collection.storyboard in Resources */,
 				B6EFEA9E28AB9CFE00A443DA /* Sample3Collection.storyboard in Resources */,
 				B6EFEA8B28AB9CFE00A443DA /* AppStoreDetail.storyboard in Resources */,
@@ -872,41 +811,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8680DF13496B2F8537BB2E55 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleCollectionView/Pods-SampleCollectionView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleCollectionView/Pods-SampleCollectionView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleCollectionView/Pods-SampleCollectionView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6EFEAF428ABA0A700A443DA /* Run Script(R.swift) */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script(R.swift)";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
 		DC862A68C56D1E2A568CB080 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -924,28 +828,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleCollectionView-SampleCollectionViewUITests/Pods-SampleCollectionView-SampleCollectionViewUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EDF7F3FFDA83A1344E438FB8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SampleCollectionView-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -959,18 +841,15 @@
 				B6EFEAB728AB9CFE00A443DA /* WaterfallLayoutCollectionViewController.swift in Sources */,
 				B6EFEA9528AB9CFE00A443DA /* DiffableDataSources02ViewController.swift in Sources */,
 				B6EFEA9D28AB9CFE00A443DA /* Sample2CollectionViewController.swift in Sources */,
-				B6DD8331289E1ACD00DE7B68 /* ThreeDCollectionViewController.swift in Sources */,
 				B6EFEAA028AB9CFE00A443DA /* Sample4CollectionViewController.swift in Sources */,
 				B6EFEA9628AB9CFE00A443DA /* CompositionalLayout05ViewController.swift in Sources */,
 				B6EFEAD328AB9EA400A443DA /* MyCollectionViewCell.swift in Sources */,
-				B6EFEAAD28AB9CFE00A443DA /* SampleCollection7ViewController.swift in Sources */,
 				B6EFEAAC28AB9CFE00A443DA /* Sample6CollectionViewController.swift in Sources */,
 				B6EFEAB628AB9CFE00A443DA /* MosaicLayout.swift in Sources */,
 				B6EFEA9128AB9CFE00A443DA /* DiffableDataSources01ViewController.swift in Sources */,
 				B6690390248BBAB2005305BD /* RootViewController.swift in Sources */,
 				B662E7EC28B6712F0066B06D /* UICompositionalLayout+.swift in Sources */,
 				B6EFEAB428AB9CFE00A443DA /* MosaicCollectionViewController.swift in Sources */,
-				B6EFEABB28AB9CFE00A443DA /* SwiftUICellCollectionViewController.swift in Sources */,
 				B6EFEAF228ABA00800A443DA /* UIScrollView+.swift in Sources */,
 				B6EFEA9928AB9CFE00A443DA /* CompositionalLayout06ViewController.swift in Sources */,
 				B6EFEA9228AB9CFE00A443DA /* CompositionalLayout01ViewController.swift in Sources */,
@@ -990,13 +869,10 @@
 				B6EFEA9428AB9CFE00A443DA /* CompositionalLayout03ViewController.swift in Sources */,
 				B6EFEA8928AB9CFE00A443DA /* AppStoreFullImageView.swift in Sources */,
 				B6EFEAF328ABA00800A443DA /* UIKit+SwiftUI.swift in Sources */,
-				B6EFEAD428AB9EA400A443DA /* SwiftUICollectionViewCell1.swift in Sources */,
 				B6EFEAD928AB9EA400A443DA /* UICollectionFooterView01.swift in Sources */,
-				B6EFEAF628ABA0DC00A443DA /* R.generated.swift in Sources */,
 				B6EFEA9828AB9CFE00A443DA /* CompositionalLayout07ViewController.swift in Sources */,
 				B6EFEA8F28AB9CFE00A443DA /* CompositionalLayout09ViewController.swift in Sources */,
 				B66903C5248BBC86005305BD /* SampleModel.swift in Sources */,
-				B6EFEAD528AB9EA400A443DA /* SwiftUICollectionViewCell1View.swift in Sources */,
 				B6EFEAD628AB9EA400A443DA /* UICollectionHeaderView01.swift in Sources */,
 				B6EFEAA228AB9CFE00A443DA /* StoppableHeaderPageCollectionViewController.swift in Sources */,
 				B6EFEA9F28AB9CFE00A443DA /* Sample3CollectionViewController.swift in Sources */,
@@ -1008,7 +884,6 @@
 				B6EFEAA928AB9CFE00A443DA /* Sample1CollectionViewController.swift in Sources */,
 				B6EFEAA528AB9CFE00A443DA /* DummyCollectionViewController.swift in Sources */,
 				B6EFEADA28AB9EA400A443DA /* UICollectionViewCell02.swift in Sources */,
-				B6EFEAAF28AB9CFE00A443DA /* ColumnFlowLayout.swift in Sources */,
 				B6EFEAB028AB9CFE00A443DA /* VHScrollCollectionViewController.swift in Sources */,
 				B6EFEAF028ABA00800A443DA /* UIViewController+.swift in Sources */,
 				B6EFEA9728AB9CFE00A443DA /* CompositionalLayout04ViewController.swift in Sources */,
@@ -1035,6 +910,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B606BDBD2C13C64C006FFA46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B606BDBC2C13C64C006FFA46 /* RswiftGenerateInternalResources */;
+		};
 		B66903A0248BBAB5005305BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B6690387248BBAB2005305BD /* SampleCollectionView */;
@@ -1175,7 +1054,6 @@
 		};
 		B66903B3248BBAB5005305BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47C9451FCB5255ACF5C706F8 /* Pods-SampleCollectionView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1193,7 +1071,6 @@
 		};
 		B66903B4248BBAB5005305BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B26FD9921906EBEC7A20B250 /* Pods-SampleCollectionView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1211,7 +1088,6 @@
 		};
 		B66903B6248BBAB5005305BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3E6E8AFE722FCD5A277F014 /* Pods-SampleCollectionViewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1233,7 +1109,6 @@
 		};
 		B66903B7248BBAB5005305BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C1F7BF32879F1BD45D38A12 /* Pods-SampleCollectionViewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1255,7 +1130,6 @@
 		};
 		B66903B9248BBAB5005305BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F72E91E6DC6F27A2CA2F04 /* Pods-SampleCollectionView-SampleCollectionViewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1275,7 +1149,6 @@
 		};
 		B66903BA248BBAB5005305BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4F1D85A84A1ACA354C867D1 /* Pods-SampleCollectionView-SampleCollectionViewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1333,6 +1206,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B606BDB62C13C41C006FFA46 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
+		B606BDB92C13C543006FFA46 /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.3;
+			};
+		};
+		B69E68242C08AF8A00C66642 /* XCRemoteSwiftPackageReference "DeclarativeUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sakiyamaK/DeclarativeUIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
+		B69E68272C08AFBD00C66642 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		B6DD725A2B779F3D00E2BBA3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B606BDB72C13C41C006FFA46 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B606BDB62C13C41C006FFA46 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		B606BDBA2C13C543006FFA46 /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B606BDB92C13C543006FFA46 /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
+		};
+		B606BDBC2C13C64C006FFA46 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B606BDB62C13C41C006FFA46 /* XCRemoteSwiftPackageReference "R" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		B69E68252C08AF8A00C66642 /* DeclarativeUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69E68242C08AF8A00C66642 /* XCRemoteSwiftPackageReference "DeclarativeUIKit" */;
+			productName = DeclarativeUIKit;
+		};
+		B69E68282C08AFBD00C66642 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69E68272C08AFBD00C66642 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		B6DD725B2B779F3D00E2BBA3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6DD725A2B779F3D00E2BBA3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6690380248BBAB2005305BD /* Project object */;
 }

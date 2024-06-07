@@ -28,8 +28,7 @@ final class CompositionalLayout08ViewController: UIViewController {
 
         declarative {
             UIStackView.vertical {
-                UISegmentedControl(items: ["First", "Second"]).imperative {
-                    let segmentControll = $0 as! UISegmentedControl
+                UISegmentedControl(items: ["First", "Second"]).apply { segmentControll in
                     segmentControll.selectedSegmentIndex = 0
                     segmentControll.addTarget(self, action: #selector(changeSegment), for: .valueChanged)
                 }
@@ -120,9 +119,8 @@ extension CompositionalLayout08ViewController: UICollectionViewDataSource {
         case UICollectionView.elementKindSectionFooter:
             let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: UICollectionReusableView.reuseId, for: indexPath)
             cell.declarative {
-                UIActivityIndicatorView().imperative {
-                    let activity = $0 as! UIActivityIndicatorView
-                    activity.startAnimating()
+                UIActivityIndicatorView().apply {
+                    $0.startAnimating()
                 }
             }
             return cell

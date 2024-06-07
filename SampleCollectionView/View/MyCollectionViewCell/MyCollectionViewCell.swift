@@ -30,6 +30,7 @@ final class MyCollectionViewCell: UICollectionViewCell {
         icon.isHidden = true
     }
 
+    @discardableResult
     func configure(sampleModel: SampleModel) -> Self {
         if let title = sampleModel.title, title.count > 0 {
             titleLabel.text = title

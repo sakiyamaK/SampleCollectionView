@@ -10,7 +10,7 @@ import Kingfisher
 import UIKit
 
 final class MyCollectionViewCell3: UICollectionViewCell {
-    private static var mockCell: MyCollectionViewCell3 = nib.instantiate(withOwner: self, options: nil).first as! MyCollectionViewCell3
+    private static var mockCell: MyCollectionViewCell3 = nib.instantiate(withOwner: MyCollectionViewCell3.self, options: nil).first as! MyCollectionViewCell3
 
     @IBOutlet private var icon: UIImageView!
 

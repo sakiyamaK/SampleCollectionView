@@ -6,19 +6,7 @@
 //  Copyright © 2020 sakiyamaK. All rights reserved.
 //
 
-import Hero
-import IQKeyboardManagerSwift
 import UIKit
-
-extension Notification.Name {
-    static let injection = Notification.Name("INJECTION_BUNDLE_NOTIFICATION")
-}
-
-extension NotificationCenter {
-    func addInjectionObserver(_ observer: Any, selector: Selector, object: Any?) {
-        NotificationCenter.default.addObserver(observer, selector: selector, name: .injection, object: object)
-    }
-}
 
 // デバッグビルドでしか出ない
 func DLog(_ obj: Any? = nil, file: String = #file, function: String = #function, line: Int = #line) {

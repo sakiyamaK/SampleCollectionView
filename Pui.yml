@@ -1,4 +1,0 @@
-MVC_COLLECTION:
-  Target: SampleCollectionView
-  TemplateDirectoryPath: ./templates/PuiTemplate/ios/MVC_COLLECTION
-  GenerateRootPath: ./SampleCollectionView/

@@ -27,11 +27,15 @@ final class DummyCollectionViewController: UIViewController {
     }
 }
 
-extension DummyCollectionViewController: UICollectionViewDelegate {}
+extension DummyCollectionViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
 
 extension DummyCollectionViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return itemCount
+        itemCount
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

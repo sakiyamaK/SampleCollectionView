@@ -15,7 +15,7 @@ final class CompositionalLayout01ViewController: UIViewController {
         super.loadView()
 
         view.backgroundColor = .white
-
+        
         declarative {
             UICollectionView {
                 // アイテム(セル)の大きさをグループの大きさと同じにする

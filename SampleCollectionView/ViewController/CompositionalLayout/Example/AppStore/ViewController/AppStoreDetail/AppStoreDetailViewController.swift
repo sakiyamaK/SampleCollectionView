@@ -5,13 +5,14 @@
 //  Created by  on 2021/4/7.
 //
 
-import SnapKit
 import UIKit
+import SnapKit
+import Hero
 
 final class AppStoreDetailViewController: UIViewController {
     private var sampleModel: SampleImageModel2!
 
-    private let appStoreFullImageView = R.nib.appStoreFullImageView.firstView(owner: nil)!
+    private let appStoreFullImageView = R.nib.appStoreFullImageView.firstView(withOwner: nil)!
     @IBOutlet var appStoreFullImageContainerView: UIView! {
         didSet {
             appStoreFullImageContainerView.addSubview(appStoreFullImageView)

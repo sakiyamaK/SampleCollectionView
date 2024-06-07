@@ -10,7 +10,7 @@ import Kingfisher
 import UIKit
 
 final class MyCollectionViewCell2: UICollectionViewCell {
-    private static var mockCell: MyCollectionViewCell2 = nib.instantiate(withOwner: self, options: nil).first as! MyCollectionViewCell2
+    private static var mockCell: MyCollectionViewCell2 = nib.instantiate(withOwner: MyCollectionViewCell2.self, options: nil).first as! MyCollectionViewCell2
 
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var icon: UIImageView!
@@ -30,6 +30,7 @@ final class MyCollectionViewCell2: UICollectionViewCell {
         descriptionLabel.isHidden = true
     }
 
+    @discardableResult
     func configure(sampleModel: SampleModel) -> Self {
         if let title = sampleModel.title, title.count > 0 {
             titleLabel.text = title

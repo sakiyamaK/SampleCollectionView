@@ -28,7 +28,11 @@ final class MosaicCollectionViewController: UIViewController {
     }
 }
 
-extension MosaicCollectionViewController: UICollectionViewDelegate {}
+extension MosaicCollectionViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
 
 extension MosaicCollectionViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
