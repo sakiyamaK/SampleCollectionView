@@ -1,23 +1,58 @@
 //
-//  UICollectionView.swift
-//  SampleCompositonalLayout
+//  UIScrollView+.swift
+//  SampleDelegateApp
 //
-//  Created by sakiyamaK on 2021/06/27.
+//  Created by sakiyamaK on 2024/07/15.
 //
 
 import UIKit
 
 extension UIScrollView {
-    var reachedBottom: Bool { reachedBottom() }
+    
+    enum ConstraintDirection {
+        case vertical, horizontal, arround
+    }
 
-    func reachedBottom(ratio: CGFloat = 0.8) -> Bool {
-        // 見えてる範囲の高さを取得
-        let visibleHeight = frame.height - contentInset.top - contentInset.bottom
-        // スクロール量の閾値
-        let threshold = max(0.0, contentSize.height - visibleHeight) * ratio
-        // 現在のスクロールのy座標をInsetの設定も考慮して取得
-        let y = contentOffset.y + contentInset.top
-        // y座標が閾値より下にあるか判定
-        return y > threshold
+    func applyScrollConstraint(_ view: UIView, direction: ConstraintDirection, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        // viewの四隅をcontentLayoutGuideの四隅とする
+        self.apply(constraints: [
+            view.topAnchor.constraint(equalTo: self.contentLayoutGuide.topAnchor, constant: constants.top),
+            view.leadingAnchor.constraint(equalTo: self.contentLayoutGuide.leadingAnchor, constant: constants.leading),
+            view.bottomAnchor.constraint(equalTo: self.contentLayoutGuide.bottomAnchor, constant: constants.bottom),
+            view.trailingAnchor.constraint(equalTo: self.contentLayoutGuide.trailingAnchor),
+        ])
+        
+        // viewの大きさをframeLayoutの大きさにする
+        let widthConstraint = view.widthAnchor.constraint(equalTo: self.frameLayoutGuide.widthAnchor, constant: -(constants.leading + constants.trailing))
+        let heightConstraint = view.heightAnchor.constraint(equalTo: self.frameLayoutGuide.heightAnchor, constant: -(constants.top + constants.bottom))
+        
+        // スクロールさせたい方向の制約のpriorityを下げておく
+        switch direction {
+        case .vertical:
+            self.apply(constraints: [
+                widthConstraint,
+                heightConstraint.priority(.init(rawValue: 1))
+            ])
+        case .horizontal:
+            self.apply(constraints: [
+                widthConstraint.priority(.init(rawValue: 1)),
+                heightConstraint
+            ])
+        case .arround:
+            self.apply(constraints: [
+                widthConstraint.priority(.init(rawValue: 1)),
+                heightConstraint.priority(.init(rawValue: 1))
+            ])
+        }
+    }
+    
+    func applyVerticalScrollConstraint(_ view: UIView, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+        applyScrollConstraint(view, direction: .vertical, constants: constants)
+    }
+    
+    func applyHorizontalScrollConstraint(_ view: UIView, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+        applyScrollConstraint(view, direction: .horizontal, constants: constants)
     }
 }
