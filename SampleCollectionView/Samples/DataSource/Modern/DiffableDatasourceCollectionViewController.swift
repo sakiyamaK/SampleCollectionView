@@ -34,6 +34,7 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
         let listLayout = UICollectionViewCompositionalLayout.list(using: configuration)
         // レイアウトを登録してインスタンスを用意
         let collectionView = UICollectionView(frame: .null, collectionViewLayout: listLayout)
+        collectionView.register(DiffbaleCollectionViewCell.self, forCellWithReuseIdentifier: DiffbaleCollectionViewCell.className)
         return collectionView
     }()
 
@@ -84,6 +85,7 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
                 // ここでは新規にsnapshotのインスタンスを作成してdiffableDataSourceに渡している
                 // collectionView自身を更新する必要はない
                 var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
+                snapshot.appendSections([0])
                 snapshot.appendItems(viewModel.items.map(\.id))
                 await self.diffableDataSource.apply(snapshot, animatingDifferences: true)
 
