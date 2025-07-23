@@ -28,6 +28,7 @@ final class CompositionalLayout2ViewController: UIViewController {
         )
 
         let item1 = NSCollectionLayoutItem(layoutSize: itemSize1)
+        item1.contentInsets = .init(top: 5, leading: 0, bottom: 5, trailing: 0)
 
         let groupSize1 = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.5),
@@ -35,6 +36,7 @@ final class CompositionalLayout2ViewController: UIViewController {
         )
         
         let group1 = NSCollectionLayoutGroup.vertical(layoutSize: groupSize1, subitems: [item1])
+        group1.contentInsets = .init(top: 0, leading: 20, bottom: 0, trailing: 0)
 
         // 左側
         let itemSize2 = NSCollectionLayoutSize(
@@ -47,10 +49,12 @@ final class CompositionalLayout2ViewController: UIViewController {
         // 全体
         let mainGroupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(80)
+            heightDimension: .absolute(300)
         )
         // NSCollectionLayoutGroupはItemも入るしNSCollectionLayoutGroupを入れ子で登録することもできる
         let mainGroup = NSCollectionLayoutGroup.horizontal(layoutSize: mainGroupSize, subitems: [item2, group1])
+        mainGroup.contentInsets = .init(top: 0, leading: 0, bottom: 10, trailing: 10)
+
 
         let section = NSCollectionLayoutSection(group: mainGroup)
         section.contentInsets = .init(top: 10, leading: 10, bottom: 10, trailing: 10)

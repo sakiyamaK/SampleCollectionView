@@ -21,7 +21,7 @@ final class Sample2CollectionViewController: UIViewController {
         // 行ごとの余白
         layout.minimumLineSpacing = 5
         // セクションごとの配置位置の余白を設定する
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 30, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 30, right: 20)
         // (*4) ヘッダとフッダの高さ
         layout.headerReferenceSize = CGSize(width: 0, height: 300)
         layout.footerReferenceSize = CGSize(width: 100, height: 100)

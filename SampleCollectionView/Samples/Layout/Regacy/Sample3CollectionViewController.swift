@@ -12,6 +12,7 @@ import UIKit
 final class Sample3CollectionViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -60,22 +61,19 @@ extension Sample3CollectionViewController: UICollectionViewDataSource {
  
  indexPathごとに呼ばれるのでCellごとに大きさを変えることができる
  */
+//extension Sample3CollectionViewController: UICollectionViewDelegate {
+//    
+//}
 extension Sample3CollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return .zero }
-
-        let num: CGFloat = 3
-        let a = collectionView.frame.width - collectionView.contentInset.left - collectionView.contentInset.right -
-            (num - 1) * flowLayout.minimumInteritemSpacing
-
-        let width = CGFloat(Int(a / num))
-        let height = CGFloat((indexPath.item % 5 + 1) * 50)
-
-        print(collectionView.frame.width)
-        print(flowLayout.minimumInteritemSpacing)
-        print(width)
-
-        return CGSize(width: width, height: height)
+        
+        let width: CGFloat
+        if indexPath.item%3 == 0 {
+            width = collectionView.frame.width
+        } else {
+            width = collectionView.frame.width / 2
+        }
+        return CGSize(width: width, height: 100)
     }
 }
 

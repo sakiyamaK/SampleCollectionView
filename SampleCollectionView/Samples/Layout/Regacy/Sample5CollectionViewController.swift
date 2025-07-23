@@ -1,15 +1,15 @@
 //
-//  Sample7CollectionViewController.swift
+//  Sample5CollectionViewController.swift
 //  SampleCollectionView
 //
 //  Created by sakiyamaK on 2024/09/04.
 //
 
-// 横スクロール
+// layoutを更新する
 
 import UIKit
 
-final class Sample7CollectionViewController: UIViewController {
+final class Sample5CollectionViewController: UIViewController {
     private lazy var stackView1: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -26,37 +26,36 @@ final class Sample7CollectionViewController: UIViewController {
 
     private lazy var switchView: UISwitch = {
         let switchView = UISwitch()
-        switchView.addAction(
-            UIAction.init(handler: {
-                action in
-                //actionの送り主のクラスを型変換
-                let switchView = action.sender as! UISwitch
-                //スイッチのON/OFFでcollectionViewのレイアウトを変更
-                self.collectionView.setCollectionViewLayout(
-                    self.layout(isVertical: !switchView.isOn),
-                    animated: true
-                )
-                // なぜかoffsetがずれるのでzeroにする
-                self.collectionView.contentOffset = .zero
-            }),
-            for: .valueChanged
-        )
+        switchView.addAction(UIAction.init(handler: { action in
+            //actionの送り主のクラスを型変換
+            let switchView = action.sender as! UISwitch
+            //スイッチのON/OFFでcollectionViewのレイアウトを変更
+            let number = switchView.isOn ? 3 : 1
+            self.collectionView.setCollectionViewLayout(self.layout(number: number), animated: true)
+            // なぜかoffsetがずれるのでzeroにする
+            self.collectionView.contentOffset = .zero
+        }), for: .valueChanged)
         return switchView
     }()
 
     private lazy var collectionView: UICollectionView = {
-        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: self.layout())
+        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: self.layout(number: 1))
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.className)
         return collectionView
     }()
-    
-    func layout(isVertical: Bool = true) -> UICollectionViewLayout {
+
+    func layout(number: Int) -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = isVertical ? .vertical : .horizontal
-        layout.sectionInset = .init(top: 0, left: 16, bottom: 0, right: 16)
-        layout.estimatedItemSize = CGSize(width: 100, height: 100)
+        layout.sectionInset = .init(top: 0, left: 30, bottom: 0, right: 30)
+        // スペーシングを考慮して、セルの幅を計算
+        let totalSpacing = layout.minimumInteritemSpacing * CGFloat(number - 1) + layout.sectionInset.left + layout.sectionInset.right
+        let totalWidth = UIScreen.main.bounds.width - totalSpacing
+        let itemWidth = Int(totalWidth / CGFloat(number))
+        
+        // 高さは固定または必要に応じて変更
+        layout.estimatedItemSize = CGSize(width: itemWidth, height: 50) // 推定サイズも設定
         
         return layout
     }
@@ -67,16 +66,17 @@ final class Sample7CollectionViewController: UIViewController {
         stackView1.applyArroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
 
         stackView1.addArrangedSubview(stackView2)
-        stackView2.addArrangedSubview(switchView)
         stackView1.addArrangedSubview(collectionView)
-        
+
+        stackView2.addArrangedSubview(switchView)
+
         collectionView.reloadData()
     }
 }
 
-extension Sample7CollectionViewController: UICollectionViewDataSource {
+extension Sample5CollectionViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return 100
+        return 15
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -99,9 +99,9 @@ extension Sample7CollectionViewController: UICollectionViewDataSource {
     }
 }
 
-extension Sample7CollectionViewController: UICollectionViewDelegate {
+extension Sample5CollectionViewController: UICollectionViewDelegate {
 }
 
 #Preview {
-    Sample7CollectionViewController()
+    Sample5CollectionViewController()
 }

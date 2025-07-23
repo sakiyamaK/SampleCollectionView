@@ -1,13 +1,13 @@
 //
-//  Sample4CollectionViewCell.swift
+//  DiffbaleCollectionViewCell.swift
 //  SampleCollectionView
 //
-//  Created by sakiyamaK on 2024/09/04.
+//  Created by sakiyamaK on 2025/07/24.
 //
 
 import UIKit
 
-final class Sample4CollectionViewCell: UICollectionViewCell {
+final class DiffbaleCollectionViewCell: UICollectionViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -27,12 +27,11 @@ final class Sample4CollectionViewCell: UICollectionViewCell {
         label.backgroundColor = .gray
         return label
     }()
-    
+
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 20
-        stackView.backgroundColor = .blue
         return stackView
     }()
 
@@ -42,26 +41,28 @@ final class Sample4CollectionViewCell: UICollectionViewCell {
         subTitleLabel.text = nil
         subTitleLabel.isHidden = true
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         self.contentView.addSubview(stackView)
-        stackView.applyArroundConstraint(equalTo: self.contentView, constants: (4, 4, 4, 4))
-        
+        stackView.applyArroundConstraint(equalTo: self.contentView)
+
         stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(UIView())
         stackView.addArrangedSubview(subTitleLabel)
-        self.backgroundColor = .black
+
+        self.backgroundColor = .systemBlue
 
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func configure(sampleModel: SampleModel) {
+
+    func configure(sampleModel: IdentifableModel) {
         titleLabel.text = sampleModel.title
-        
+
         if let subTitle = sampleModel.subTitle, !subTitle.isEmpty {
             subTitleLabel.text = subTitle
             subTitleLabel.isHidden = false

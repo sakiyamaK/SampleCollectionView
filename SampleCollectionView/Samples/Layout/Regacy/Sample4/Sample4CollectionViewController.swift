@@ -37,7 +37,7 @@ final class Sample4CollectionViewController: UIViewController {
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = CGSize(width: view.bounds.width, height: 0) // 推定サイズを設定
+        layout.minimumInteritemSpacing = 10
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -46,7 +46,7 @@ final class Sample4CollectionViewController: UIViewController {
     }()
         
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         self.view.addSubview(collectionView)
         collectionView.applyArroundConstraint(equalTo: self.view)
         collectionView.reloadData()
@@ -69,6 +69,20 @@ extension Sample4CollectionViewController: UICollectionViewDataSource {
 extension Sample4CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         DLog(indexPath)
+    }
+}
+
+extension Sample4CollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let width: CGFloat
+        if indexPath.item%3 == 0 {
+            width = collectionView.frame.width
+        } else {
+            let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+            width = collectionView.frame.width / 2 - flowLayout.minimumLineSpacing
+        }
+        return CGSize(width: width, height: 100)
     }
 }
 

@@ -22,7 +22,7 @@ final class CompositionalLayout1ViewController: UIViewController {
     private lazy var layout: UICollectionViewLayout = {
         // アイテム(セル)の大きさをグループの大きさに対する比率で求める
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(0.5),
+            widthDimension: .fractionalWidth(1.0/3),
             heightDimension: .fractionalHeight(1.0)
         )
 
@@ -33,7 +33,7 @@ final class CompositionalLayout1ViewController: UIViewController {
         // グループサイズの横幅をコレクションビューの横幅と同じ、高さを44にる
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(44)
+            heightDimension: .estimated(300)
         )
         // グループの大きさとアイテムの種類を登録する
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])

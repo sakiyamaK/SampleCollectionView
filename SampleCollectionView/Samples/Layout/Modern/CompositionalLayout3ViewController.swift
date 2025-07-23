@@ -26,6 +26,7 @@ final class CompositionalLayout3ViewController: UIViewController {
         let configuration = UICollectionLayoutListConfiguration(appearance: appearance)
         // レイアウトを特別なlistにしてその設定を登録して初期化する
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        
         return layout
     }()
     

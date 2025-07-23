@@ -16,7 +16,7 @@ final class Sample1CollectionViewController: UIViewController {
         // StoryboardでUICollectionViewを設定するとデフォルトがこれ
         let layout = UICollectionViewFlowLayout()
         // レイアウトを登録してインスタンスを用意
-        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         // tableviewと同じくdataSourceとdelegateとセルの登録を行う
         collectionView.dataSource = self
         collectionView.delegate = self
