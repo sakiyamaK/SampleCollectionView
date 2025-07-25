@@ -12,7 +12,7 @@ import UIKit
 final class CompositionalLayout1ViewController: UIViewController {
 
     private lazy var collectionView: UICollectionView = {
-        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
+        let collectionView: UICollectionView = .init(frame: .null, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.className)
@@ -22,8 +22,8 @@ final class CompositionalLayout1ViewController: UIViewController {
     private lazy var layout: UICollectionViewLayout = {
         // アイテム(セル)の大きさをグループの大きさに対する比率で求める
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0/3),
-            heightDimension: .fractionalHeight(1.0)
+            widthDimension: NSCollectionLayoutDimension.fractionalWidth(1.0/3.0),
+            heightDimension: NSCollectionLayoutDimension.fractionalHeight(1.0)
         )
 
         // アイテム設定に大きさを登録してインスタンスを作る
@@ -32,8 +32,8 @@ final class CompositionalLayout1ViewController: UIViewController {
 
         // グループサイズの横幅をコレクションビューの横幅と同じ、高さを44にる
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(300)
+            widthDimension: NSCollectionLayoutDimension.fractionalWidth(1.0),
+            heightDimension: NSCollectionLayoutDimension.estimated(300)
         )
         // グループの大きさとアイテムの種類を登録する
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -57,7 +57,7 @@ final class CompositionalLayout1ViewController: UIViewController {
 
 extension CompositionalLayout1ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DLog(indexPath)
+        print(indexPath)
     }
 }
 

@@ -1,17 +1,14 @@
 //
-//  Untitled.swift
+//  ContentConfiguration2ViewController.swift
 //  SampleCollectionView
 //
-//  Created by sakiyamaK on 2025/07/24.
+//  Created by sakiyamaK on 2025/07/25.
 //
-
 import UIKit
-import SwiftUI
 
-final class ContentConfiguration1ViewController: UIViewController {
+final class ContentConfiguration2ViewController: UIViewController {
 
-    // @State属性をつけて$viewModelでBindingできるようにする
-    @State private var viewModel: DiffbaleDatasource2ViewModel = .init()
+    private var viewModel: ObservableViewModel = .init()
 
     private lazy var diffableDataSource = UICollectionViewDiffableDataSource<Int, String>(
         collectionView: collectionView
@@ -25,21 +22,18 @@ final class ContentConfiguration1ViewController: UIViewController {
             for: indexPath
         )
 
-        let item = self.$viewModel.items.first(where: { $0.id == itemId })!
+        let item = self.viewModel.items.first(where: { $0.id == itemId })!
 
-         // UIHostingConfigurationでセルのレイアウトをSwiftUIで組める
-        cell.contentConfiguration = UIHostingConfiguration {
-            SwiftUIView(
-                model: item
-            )
-        }
+         // contentConfigurationにUIContentViewに準拠したUIViewをセルのレイアウトに利用できる
+        // UIContentViewに準拠したUIViewはUITableViewでも使えるし、普通のUIViewとしても使える
+        // もういちいちUICollectionViewCellやUITableViewCellを継承させなくていい
+        cell.contentConfiguration = UIKitContentConfiguration(item: item)
         return cell
     }
 
     private lazy var collectionView: UICollectionView = {
         let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
         let listLayout = UICollectionViewCompositionalLayout.list(using: configuration)
-        // レイアウトを登録してインスタンスを用意
         let collectionView = UICollectionView(frame: .null, collectionViewLayout: listLayout)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.className)
         return collectionView
@@ -52,15 +46,10 @@ final class ContentConfiguration1ViewController: UIViewController {
 
         collectionView.applyArroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
 
-        // 非同期処理を実行するのでTaskで囲う
         Task {
             do {
                 try await viewModel.fetchItems()
 
-                // snapshot = 現在のDataSourceの状態を安全に取得する
-                // 非同期でどこかでセルの状態が変わったとしてもsnapshotを取った時点で完全に独立しているので影響はない(クラッシュしない)
-                // ここでは新規にsnapshotのインスタンスを作成してdiffableDataSourceに渡している
-                // collectionView自身を更新する必要はない
                 var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
                 let itemIds: [String] = viewModel.items.map(\.id)
                 snapshot.appendSections([0])
@@ -71,7 +60,6 @@ final class ContentConfiguration1ViewController: UIViewController {
                 print(e)
             }
         }
-
     }
 }
 

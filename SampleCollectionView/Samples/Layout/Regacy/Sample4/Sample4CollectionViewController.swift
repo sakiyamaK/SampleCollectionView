@@ -41,6 +41,7 @@ final class Sample4CollectionViewController: UIViewController {
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
+        // セルの登録
         collectionView.register(Sample4CollectionViewCell.self, forCellWithReuseIdentifier: Sample4CollectionViewCell.className)
         return collectionView
     }()
@@ -59,6 +60,7 @@ extension Sample4CollectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Sample4CollectionViewCell.className, for: indexPath) as! Sample4CollectionViewCell
         cell.configure(sampleModel: sampleModels[indexPath.item])
         
@@ -68,7 +70,7 @@ extension Sample4CollectionViewController: UICollectionViewDataSource {
 
 extension Sample4CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DLog(indexPath)
+        print(indexPath)
     }
 }
 

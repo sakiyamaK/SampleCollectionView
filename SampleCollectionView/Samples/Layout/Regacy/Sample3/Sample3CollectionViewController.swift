@@ -13,7 +13,7 @@ final class Sample3CollectionViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
-        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
+        let collectionView: UICollectionView = .init(frame: .null, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.className)

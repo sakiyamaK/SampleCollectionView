@@ -32,7 +32,6 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
         let listLayout = UICollectionViewCompositionalLayout.list(using: configuration)
-        // レイアウトを登録してインスタンスを用意
         let collectionView = UICollectionView(frame: .null, collectionViewLayout: listLayout)
         collectionView.register(DiffbaleCollectionViewCell.self, forCellWithReuseIdentifier: DiffbaleCollectionViewCell.className)
         return collectionView
@@ -99,7 +98,7 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
 
 extension DiffableDatasourceCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DLog(indexPath)
+        print(indexPath)
     }
 }
 

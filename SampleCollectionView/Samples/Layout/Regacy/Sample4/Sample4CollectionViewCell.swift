@@ -53,7 +53,6 @@ final class Sample4CollectionViewCell: UICollectionViewCell {
         stackView.addArrangedSubview(subTitleLabel)
 
         self.backgroundColor = .systemBlue
-
     }
     
     required init?(coder: NSCoder) {

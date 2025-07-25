@@ -68,7 +68,7 @@ final class Sample8CollectionViewController: UIViewController {
 
 extension Sample8CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DLog(indexPath)
+        print(indexPath)
     }
 }
 

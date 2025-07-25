@@ -12,7 +12,7 @@ import UIKit
 final class CompositionalLayout2ViewController: UIViewController {
 
     private lazy var collectionView: UICollectionView = {
-        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
+        let collectionView: UICollectionView = .init(frame: .null, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.className)
@@ -73,7 +73,7 @@ final class CompositionalLayout2ViewController: UIViewController {
 
 extension CompositionalLayout2ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DLog(indexPath)
+        print(indexPath)
     }
 }
 

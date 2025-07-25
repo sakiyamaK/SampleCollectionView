@@ -12,7 +12,7 @@ import UIKit
 final class AppStoreViewController: UIViewController {
 
     private lazy var collectionView: UICollectionView = {
-        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
+        let collectionView: UICollectionView = .init(frame: .null, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.className)
@@ -44,6 +44,7 @@ final class AppStoreViewController: UIViewController {
 
         return section
     }
+
     private func mainSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
@@ -73,10 +74,11 @@ final class AppStoreViewController: UIViewController {
             environment in
             switch sectionIndex {
             case 0:
+                // こんな風にsectionごとにメソッドに分けてもいい
                 return self.topSection()
             case 1:
+                // こんな風にsectionごとにメソッドに分けてもいい
                 return self.mainSection()
-                
             case 2:
                 let itemSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1.0),
@@ -108,8 +110,12 @@ final class AppStoreViewController: UIViewController {
                 // セクションのヘッダーサイズを指定
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
                 
-                let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-                
+                let header = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: headerSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top
+                )
+
                 section.boundarySupplementaryItems = [
                     header
                 ]
@@ -174,7 +180,7 @@ final class AppStoreViewController: UIViewController {
 
 extension AppStoreViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DLog(indexPath)
+        print(indexPath)
     }
 }
 

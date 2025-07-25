@@ -29,7 +29,7 @@ final class CompositionalLayout4ViewController: UIViewController {
                     using: .init(appearance: .insetGrouped),
                     layoutEnvironment: environment
                 )
-            }else if sectionIndex%2 == 1 {
+            } else if sectionIndex%2 == 1 {
                 let itemSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1.0),
                     heightDimension: .fractionalHeight(1.0)
@@ -86,7 +86,7 @@ final class CompositionalLayout4ViewController: UIViewController {
 
 extension CompositionalLayout4ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        DLog(indexPath)
+        print(indexPath)
     }
 }
 

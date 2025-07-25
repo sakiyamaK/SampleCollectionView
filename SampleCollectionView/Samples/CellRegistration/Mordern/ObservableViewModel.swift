@@ -8,7 +8,7 @@
 import Foundation
 
 @Observable
-final class DiffbaleDatasource2ViewModel {
+final class ObservableViewModel {
 
     var items: [IdentifableModel] = []
 

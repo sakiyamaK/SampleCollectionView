@@ -39,7 +39,7 @@ final class Sample5CollectionViewController: UIViewController {
     }()
 
     private lazy var collectionView: UICollectionView = {
-        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: self.layout(number: 1))
+        let collectionView: UICollectionView = .init(frame: .null, collectionViewLayout: self.layout(number: 1))
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.className)
@@ -49,14 +49,16 @@ final class Sample5CollectionViewController: UIViewController {
     func layout(number: Int) -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = .init(top: 0, left: 30, bottom: 0, right: 30)
+
         // スペーシングを考慮して、セルの幅を計算
         let totalSpacing = layout.minimumInteritemSpacing * CGFloat(number - 1) + layout.sectionInset.left + layout.sectionInset.right
         let totalWidth = UIScreen.main.bounds.width - totalSpacing
         let itemWidth = Int(totalWidth / CGFloat(number))
-        
+
         // 高さは固定または必要に応じて変更
         layout.estimatedItemSize = CGSize(width: itemWidth, height: 50) // 推定サイズも設定
-        
+        layout.itemSize = CGSize(width: itemWidth, height: 50)
+
         return layout
     }
     
