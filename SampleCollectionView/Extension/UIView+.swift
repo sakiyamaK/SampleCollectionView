@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    typealias ArroundConstraintConstants = (top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat)
+    typealias AroundConstraintConstants = (top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat)
     
     func apply(constraints: [NSLayoutConstraint]) {
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +19,7 @@ extension UIView {
         apply(constraints: [constraint])
     }
 
-    func applyArroundConstraint(equalTo layoutGuide: UILayoutGuide, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+    func applyAroundConstraint(equalTo layoutGuide: UILayoutGuide, constants: AroundConstraintConstants = (0, 0, 0, 0)) {
         self.apply(constraints: [
             self.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: constants.top),
             self.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: constants.leading),
@@ -28,7 +28,7 @@ extension UIView {
         ])
     }
     
-    func applyArroundConstraint(equalTo view: UIView, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+    func applyAroundConstraint(equalTo view: UIView, constants: AroundConstraintConstants = (0, 0, 0, 0)) {
         self.apply(constraints: [
             self.topAnchor.constraint(equalTo: view.topAnchor, constant: constants.top),
             self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: constants.leading),

@@ -44,7 +44,7 @@ final class ContentConfiguration2ViewController: UIViewController {
 
         self.view.addSubview(collectionView)
 
-        collectionView.applyArroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
+        collectionView.applyAroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
 
         Task {
             do {

@@ -48,6 +48,7 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
                 // diffableDataSourceに新しいsnapshotを登録する
 
                 let snapshot = self.createSnapShot()
+
 //                let snapshot = self.updateSnapShot()
 
                 // collectionView自身を更新する必要はない
@@ -67,7 +68,7 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
 
         self.view.addSubview(stackView)
 
-        stackView.applyArroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
+        stackView.applyAroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
 
         stackView.addArrangedSubview(removeButton)
 

@@ -49,7 +49,7 @@ final class ContentConfiguration1ViewController: UIViewController {
 
         self.view.addSubview(collectionView)
 
-        collectionView.applyArroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
+        collectionView.applyAroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
 
         // 非同期処理を実行するのでTaskで囲う
         Task {

@@ -66,7 +66,7 @@ final class CompositionalLayout2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(collectionView)
-        collectionView.applyArroundConstraint(equalTo: self.view)
+        collectionView.applyAroundConstraint(equalTo: self.view)
         collectionView.reloadData()
     }
 }

@@ -54,7 +54,7 @@ class UIKitContentView: UIView, UIContentView {
 
         addSubview(stackView)
 
-        stackView.applyArroundConstraint(equalTo: self)
+        stackView.applyAroundConstraint(equalTo: self)
 
         // 初期設定を適用
         apply(configuration: configuration)

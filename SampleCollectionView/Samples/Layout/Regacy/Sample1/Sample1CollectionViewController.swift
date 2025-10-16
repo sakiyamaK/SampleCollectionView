@@ -29,7 +29,7 @@ final class Sample1CollectionViewController: UIViewController {
         // ここで初めてlazyなcollectionViewに代入されている即時実行関数が実行される
         self.view.addSubview(collectionView)
         // collectionViewに制約を貼る
-        collectionView.applyArroundConstraint(equalTo: self.view)
+        collectionView.applyAroundConstraint(equalTo: self.view)
         // reloadDataで画面更新
         // collectionViewはこれを呼ばなくてもなぜか最初はreloadDataしてくれるが一応呼び出した
         collectionView.reloadData()

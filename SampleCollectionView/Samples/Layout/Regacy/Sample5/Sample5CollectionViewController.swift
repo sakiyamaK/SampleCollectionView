@@ -65,7 +65,7 @@ final class Sample5CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(stackView1)
-        stackView1.applyArroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
+        stackView1.applyAroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
 
         stackView1.addArrangedSubview(stackView2)
         stackView1.addArrangedSubview(collectionView)

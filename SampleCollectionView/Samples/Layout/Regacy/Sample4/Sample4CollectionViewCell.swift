@@ -46,7 +46,7 @@ final class Sample4CollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         self.contentView.addSubview(stackView)
-        stackView.applyArroundConstraint(equalTo: self.contentView)
+        stackView.applyAroundConstraint(equalTo: self.contentView)
 
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(UIView())

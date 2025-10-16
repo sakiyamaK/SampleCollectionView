@@ -10,10 +10,10 @@ import UIKit
 extension UIScrollView {
     
     enum ConstraintDirection {
-        case vertical, horizontal, arround
+        case vertical, horizontal, Around
     }
 
-    func applyScrollConstraint(_ view: UIView, direction: ConstraintDirection, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+    func applyScrollConstraint(_ view: UIView, direction: ConstraintDirection, constants: AroundConstraintConstants = (0, 0, 0, 0)) {
         view.translatesAutoresizingMaskIntoConstraints = false
 
         // viewの四隅をcontentLayoutGuideの四隅とする
@@ -40,7 +40,7 @@ extension UIScrollView {
                 widthConstraint.priority(.init(rawValue: 1)),
                 heightConstraint
             ])
-        case .arround:
+        case .Around:
             self.apply(constraints: [
                 widthConstraint.priority(.init(rawValue: 1)),
                 heightConstraint.priority(.init(rawValue: 1))
@@ -48,11 +48,11 @@ extension UIScrollView {
         }
     }
     
-    func applyVerticalScrollConstraint(_ view: UIView, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+    func applyVerticalScrollConstraint(_ view: UIView, constants: AroundConstraintConstants = (0, 0, 0, 0)) {
         applyScrollConstraint(view, direction: .vertical, constants: constants)
     }
     
-    func applyHorizontalScrollConstraint(_ view: UIView, constants: ArroundConstraintConstants = (0, 0, 0, 0)) {
+    func applyHorizontalScrollConstraint(_ view: UIView, constants: AroundConstraintConstants = (0, 0, 0, 0)) {
         applyScrollConstraint(view, direction: .horizontal, constants: constants)
     }
 }

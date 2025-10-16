@@ -47,7 +47,7 @@ final class Sample8CollectionViewController: UIViewController {
 
         self.view.addSubview(stackView)
 
-        stackView.applyArroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
+        stackView.applyAroundConstraint(equalTo: self.view.safeAreaLayoutGuide)
 
         stackView.addArrangedSubview(removeButton)
 
