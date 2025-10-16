@@ -47,7 +47,6 @@ class UIKitContentView: UIView, UIContentView {
         // UIのセットアップ
         let stackView = UIStackView(arrangedSubviews: [
             mainLabel,
-            UIView(),
             subLabel
         ])
         stackView.axis = .vertical

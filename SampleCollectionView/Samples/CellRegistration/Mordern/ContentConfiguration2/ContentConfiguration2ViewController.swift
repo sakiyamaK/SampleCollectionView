@@ -51,9 +51,8 @@ final class ContentConfiguration2ViewController: UIViewController {
                 try await viewModel.fetchItems()
 
                 var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
-                let itemIds: [String] = viewModel.items.map(\.id)
                 snapshot.appendSections([0])
-                snapshot.appendItems(itemIds)
+                snapshot.appendItems(viewModel.items.map(\.id))
                 await self.diffableDataSource.apply(snapshot, animatingDifferences: true)
 
             } catch let e {
@@ -64,5 +63,5 @@ final class ContentConfiguration2ViewController: UIViewController {
 }
 
 #Preview {
-    ContentConfiguration1ViewController()
+    ContentConfiguration2ViewController()
 }

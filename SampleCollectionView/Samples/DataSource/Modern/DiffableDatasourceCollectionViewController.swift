@@ -33,7 +33,9 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
         let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
         let listLayout = UICollectionViewCompositionalLayout.list(using: configuration)
         let collectionView = UICollectionView(frame: .null, collectionViewLayout: listLayout)
+
         collectionView.register(DiffbaleCollectionViewCell.self, forCellWithReuseIdentifier: DiffbaleCollectionViewCell.className)
+
         return collectionView
     }()
 
