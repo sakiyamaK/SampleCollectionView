@@ -47,7 +47,7 @@ final class CompositionalLayout4ViewController: UIViewController {
 
                 let section = NSCollectionLayoutSection(group: group)
                 // 横スクロールの動きを設定
-                section.orthogonalScrollingBehavior = .continuous
+                section.orthogonalScrollingBehavior = .groupPaging
 
                 section.contentInsets = .init(top: 10, leading: 10, bottom: 10, trailing: 10)
 

@@ -21,9 +21,11 @@ final class CompositionalLayout3ViewController: UIViewController {
     
     private lazy var layout: UICollectionViewLayout = {
         // 見た目など全て標準のふるまい(Appearance)にする
-        let appearance = UICollectionLayoutListConfiguration.Appearance.plain
+        let appearance = UICollectionLayoutListConfiguration.Appearance.insetGrouped
+
         // 設定(Configuration)にふるまいを登録して初期化する
-        let configuration = UICollectionLayoutListConfiguration(appearance: appearance)
+        var configuration = UICollectionLayoutListConfiguration(appearance: appearance)
+        configuration.backgroundColor = .systemGray
         // レイアウトを特別なlistにしてその設定を登録して初期化する
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
         
@@ -45,8 +47,13 @@ extension CompositionalLayout3ViewController: UICollectionViewDelegate {
 }
 
 extension CompositionalLayout3ViewController: UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        10
+    }
+
     func collectionView(_: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

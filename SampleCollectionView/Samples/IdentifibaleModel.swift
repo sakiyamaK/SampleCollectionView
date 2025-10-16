@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct IdentifableModel: Identifiable {
+struct IdentifableModel: Identifiable, Hashable {
     var id: String = UUID().uuidString
     var title: String
     var subTitle: String?

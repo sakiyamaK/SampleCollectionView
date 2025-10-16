@@ -43,14 +43,13 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
         let action = UIAction(handler: { _ in
             Task {
                 self.viewModel.removeItem()
-                // diffableDataSourceから現在の内部データの状態をsnapshotとして取得する
-                // collectionView自身を更新する必要はない
-                var snapshot = self.diffableDataSource.snapshot()
-                // snapshotをまっさらにする
-                snapshot.deleteAllItems()
-                // snapshotに新しいデータを登録する
-                snapshot.appendItems(self.viewModel.items.map(\.id))
+
+
                 // diffableDataSourceに新しいsnapshotを登録する
+
+                let snapshot = self.createSnapShot()
+//                let snapshot = self.updateSnapShot()
+
                 // collectionView自身を更新する必要はない
                 // *** diffableDataSourceが内部でデータの差分があるところだけ更新する ***
                 await self.diffableDataSource.apply(snapshot, animatingDifferences: true)
@@ -83,16 +82,33 @@ final class DiffableDatasourceCollectionViewController: UIViewController {
                 // 非同期でどこかでセルの状態が変わったとしてもsnapshotを取った時点で完全に独立しているので影響はない(クラッシュしない)
                 // ここでは新規にsnapshotのインスタンスを作成してdiffableDataSourceに渡している
                 // collectionView自身を更新する必要はない
-                var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
-                snapshot.appendSections([0])
-                snapshot.appendItems(viewModel.items.map(\.id))
+
+                let snapshot = createSnapShot()
+
                 await self.diffableDataSource.apply(snapshot, animatingDifferences: true)
 
             } catch let e {
                 print(e)
             }
         }
+    }
 
+    private func createSnapShot() -> NSDiffableDataSourceSnapshot<Int, String> {
+        var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(viewModel.items.map(\.id))
+        return snapshot
+    }
+
+    private func updateSnapShot() -> NSDiffableDataSourceSnapshot<Int, String> {
+        // diffableDataSourceから現在の内部データの状態をsnapshotとして取得する
+        // collectionView自身を更新する必要はない
+        var snapshot = self.diffableDataSource.snapshot()
+        // snapshotをまっさらにする
+        snapshot.deleteAllItems()
+        // snapshotに新しいデータを登録する
+        snapshot.appendItems(self.viewModel.items.map(\.id))
+        return snapshot
     }
 }
 
